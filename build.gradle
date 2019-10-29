@@ -1,0 +1,39 @@
+buildscript {
+    ext.kotlin_version = '1.0.0'
+    repositories {
+        maven { url "http://10.182.30.159:8081/repository/maven-public/" }
+        maven { url "http://10.182.30.159:8081/repository/fabricandroid-release/" }
+        maven { url "http://10.182.30.159:8081/repository/googleandroid-release/" }
+        maven { url "http://10.182.30.159:8081/repository/jitpack/" }
+        maven { url "http://10.182.30.159:8081/repository/jcenter-cache/"
+            content {
+                excludeGroupByRegex "com\\.mongodb.*"
+            }
+        }
+        maven { url "http://10.182.30.159:8081/repository/qa-release" }
+
+        dependencies {
+            classpath 'com.android.tools.build:gradle:3.4.2'
+            classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+            classpath 'io.fabric.tools:gradle:1.29.0'
+            classpath 'com.google.gms:google-services:4.3.0'
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "http://10.182.30.159:8081/repository/qa-release" }
+        maven { url "http://10.182.30.159:8081/repository/maven-public" }
+        maven { url "http://10.182.30.159:8081/repository/jitpack" }
+        maven { url "http://10.182.30.159:8081/repository/jcenter-cache"
+            content {
+                excludeGroupByRegex "com\\.mongodb.*"
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

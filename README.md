@@ -1,29 +1,28 @@
-# README #
+# Reports App #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Este é o repositório do código fonte do app dashboard para android.
 
-### What is this repository for? ###
+### Contribua conosco ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* A nossa política de code review está em construção
 
-### How do I get set up? ###
+## 1 - Ferramentas e tecnologias ##
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Estas são as tecnologias e estruturas que utilizamos no projeto:
+- Android/Java 8
+- Gradle
+- MPChartLib
+			
+## 2 - Resultados de gráficos ##
 
-### Contribution guidelines ###
+Todas as informações geradas neste app está baseada no Jira, Jenkins, ALM e SonarQube.
+* O Score do sistema (Half Pie) é gerado baseado no cálculo da média de todas as mpetricas do sistema.
+* O histórico do Score (Line Chart) é beaseado na nota que o sistema tem ao longo do tempo.
+* Os tipos de issues (Horizontal bar chart) são obtidos do SonarQube.
+* Os issues pro criticidade (Bar chart) são obtidos do SonarQube.
 
-* Writing tests
-* Code review
-* Other guidelines
+## 3 - Pre requisitos ##
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* 1 - Para poder utilizar o app, serao nessarias as suas credenciais (usuário e senha).
+* 2 - É necessario estar conectado na rede interna da empresa (SIGMA)
+* 3 - É necessário estar inserido no grupo de firewall G_WIFI_SIGMA

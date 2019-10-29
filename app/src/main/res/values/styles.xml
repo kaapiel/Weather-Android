@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="CieloReportsTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/cielo_blue</item>
+        <item name="colorPrimaryDark">@color/black_cielo</item>
+        <item name="colorAccent">#ffffff</item>
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_voltar</item>
+    </style>
+
+    <style name="CieloReportsTheme.Black" parent="@style/CieloReportsTheme">
+        <item name="colorAccent">@android:color/black</item>
+    </style>
+
+    <style name="CieloReportsTheme.Blue" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/cielo_blue</item>
+        <item name="colorPrimaryDark">@color/black_cielo</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_voltar</item>
+        <item name="colorControlNormal">#ffffff</item>
+    </style>
+
+
+    <style name="CieloReportsTheme.ActivateDeviceActivity" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/cielo_blue</item>
+        <item name="colorPrimaryDark">@color/black_cielo</item>
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_voltar</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Toolbar" parent="CieloReportsTheme.TextView">
+        <item name="android:textColor">@color/toolbar_title</item>
+        <item name="android:textSize">@dimen/toolbar_title</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="fontPath">fonts/Signika-Regular.ttf</item>
+    </style>
+
+    <style name="CieloReportsTheme.Fullscreen.Splash" parent="CieloReportsTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="CieloReportsTheme.Fullscreen.BrandingBank"
+        parent="CieloReportsTheme.Fullscreen.Splash">
+    </style>
+
+    <style name="CieloReportsTheme.TextView" parent="android:TextAppearance.Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontPath">fonts/museosans_500.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Home" parent="@style/CieloReportsTheme.TextView">
+        <item name="android:textColor">@color/cielo_blue</item>
+        <item name="android:textSize">18.5sp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+
+    <style name="CieloReportsTheme.EditText" parent="android:TextAppearance.Widget.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="fontPath">fonts/museosans_500.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.EditText.Activation.Code" parent="Material.Widget.EditText.Light">
+        <item name="android:layout_marginLeft">@dimen/login_content_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/login_content_margin_right</item>
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:textColor">@color/register_user_info</item>
+        <item name="android:textSize">@dimen/login_password</item>
+        <item name="android:textColorHint">@color/register_user_info</item>
+        <item name="android:maxLength">6</item>
+        <item name="et_dividerColor">@color/register_user_info</item>
+        <item name="et_labelTextColor">@color/register_user_info</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Banner.Error" parent="CieloReportsTheme.TextView">
+        <item name="android:textSize">@dimen/banner_error</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Custom.Dialog.Alert.Title" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_marginTop">@dimen/custom_alert_dialog_title_margin_top</item>
+        <item name="android:textSize">@dimen/custom_alert_dialog_title</item>
+        <item name="android:textColor">@color/custom_alert_dialog_title</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="fontPath">fonts/Signika-Regular.ttf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Title.White" parent="CieloReportsTheme.TextView">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontPath">fonts/Signika-Regular.ttf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Custom.Dialog.Alert.Description" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_marginTop">@dimen/custom_alert_dialog_description_margin_top
+        </item>
+        <item name="android:layout_marginRight">
+            @dimen/custom_alert_dialog_description_margin_right
+        </item>
+        <item name="android:layout_marginLeft">@dimen/custom_alert_dialog_description_margin_left
+        </item>
+        <item name="android:textSize">@dimen/custom_alert_dialog_description</item>
+        <item name="android:textColor">@color/custom_alert_dialog_description</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.EditText.Custom.Dialog.Alert.Button" parent="CieloReportsTheme.EditText">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/custom_alert_dialog_button</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="CieloReportsTheme.EditText.Custom.Dialog.Password" parent="Material.Widget.EditText.Light">
+        <item name="android:layout_marginLeft">46dp</item>
+        <item name="android:layout_marginRight">46dp</item>
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:textColor">#b3ffffff</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColorHint">#b3ffffff</item>
+        <item name="android:maxLength">6</item>
+        <item name="et_dividerColor">#73ed037c</item>
+        <item name="et_labelTextColor">#b3ffffff</item>
+        <item name="et_supportTextErrorColor">#FFFF0000</item>
+        <item name="et_dividerErrorColor">#FFFF0000</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="CieloReportsTheme.ImageView.Register" parent="android:Widget">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">right|center_vertical</item>
+    </style>
+
+    <style name="CieloReportsTheme.Spinner" parent="Material.Widget.Spinner.Light">
+        <item name="spn_labelEnable">true</item>
+        <item name="spn_labelTextColor">@color/register_user_line</item>
+        <item name="spn_dividerColor">#FFFFFF</item>
+        <item name="spn_arrowSwitchMode">true</item>
+        <item name="spn_arrowAnimDuration">@android:integer/config_shortAnimTime</item>
+        <item name="spn_arrowInterpolator">@android:anim/decelerate_interpolator</item>
+        <item name="spn_arrowColor">#FFFFFF</item>
+        <item name="android:popupBackground">@drawable/abc_popup_background_mtrl_mult</item>
+    </style>
+
+    <style name="CieloReportsTheme.Spinner.Item" parent="Material.Drawable.Ripple.Wave">
+        <item name="rd_maskType">rectangle</item>
+        <item name="rd_rippleColor">@color/register_user_line</item>
+        <item name="rd_cornerRadius">0dp</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <!-- MENU -->
+    <style name="CieloReportsTheme.NavigationView" parent="Widget.Design.NavigationView">
+        <item name="android:listDivider">@color/home_menu_divider_color</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:itemBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="CieloReportsTheme.NavigationView.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/home_navigationview_text_size</item>
+    </style>
+
+    <style name="CieloReportsTheme.NavigationView.TextAppearance.MyAccount" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/home_menu_group_divider_color</item>
+        <item name="android:textSize">@dimen/home_navigationview_text_size</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Menu.Header.Greet" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_marginTop">@dimen/menu_header_name_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/menu_header_content_margin_left</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/menu_header_name_text_size</item>
+        <item name="fontPath">fonts/museosans_700.otf</item>
+    </style>
+
+
+    <style name="CieloReportsTheme.TextView.Menu.Header.Name" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_marginLeft">@dimen/menu_header_content_margin_left</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/menu_header_name_text_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="fontPath">fonts/museosans_500.otf</item>
+    </style>
+
+    <!-- My Info -->
+    <style name="CieloReportsTheme.TextView.MyInfo.Banner" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">@dimen/my_account_banner_padding_top</item>
+        <item name="android:paddingLeft">@dimen/my_account_banner_padding_left</item>
+        <item name="android:paddingRight">@dimen/my_account_banner_padding_right</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/my_info_banner_text_size</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.MyInfo.Banner.Site" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">@dimen/my_account_banner_padding_bottom</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/my_info_banner_site_text_size</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Rescue.Fields.Order" parent="@style/CieloReportsTheme.TextView">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/gray_888888</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Rescue.Fields" parent="@style/CieloReportsTheme.TextView">
+        <item name="android:textSize">14.3sp</item>
+        <item name="android:textColor">#108050</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Rescue.Fields.Bold" parent="@style/CieloReportsTheme.TextView.Rescue.Fields">
+        <item name="fontPath">fonts/museosans_700.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Rescue.Fields.Bold500" parent="@style/CieloReportsTheme.TextView.Rescue.Fields">
+        <item name="fontPath">fonts/museosans_500.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Rescue.Fields.Pink.Bold500" parent="@style/CieloReportsTheme.TextView.Rescue.Fields">
+        <item name="fontPath">fonts/museosans_500.otf</item>
+        <item name="android:textColor">#26a300</item>
+    </style>
+
+    <style name="CircularProgressDrawableStyle" parent="Material.Drawable.CircularProgress">
+        <item name="cpd_strokeColor">@color/cielo_blue</item>
+        <item name="cpd_strokeSize">2dp</item>
+    </style>
+
+    <!-- My Account -->
+    <style name="CieloReportsTheme.TextView.MyAccount.Title" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_marginLeft">@dimen/my_account_title_margin_left</item>
+        <item name="android:textColor">#108050</item>
+        <item name="android:textSize">@dimen/my_account_title_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <!-- Loading -->
+    <style name="CieloReportsTheme.TextView.Loading" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_marginTop">@dimen/loading_text_margin_top</item>
+        <item name="android:textColor">@color/loading_text_color</item>
+        <item name="android:textSize">@dimen/loading_text_size</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.TextView.Mini.Loading" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_marginLeft">@dimen/mini_loading_text_margin_left</item>
+        <item name="android:textColor">@color/cielo_blue</item>
+        <item name="android:textSize">@dimen/loading_text_size</item>
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="CieloReportsTheme.CustomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="SimpleDialog" parent="Material.App.Dialog.Simple.Light">
+        <item name="di_inAnimation">@anim/anim_scale_in</item>
+        <item name="di_outAnimation">@anim/anim_scale_out</item>
+    </style>
+
+    <style name="CieloReportsTheme.Dialog.Loading" parent="CieloReportsTheme.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="CieloReportsTheme.DialogConfirmation" parent="@android:style/Theme.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:width">310dp</item>
+    </style>
+
+    <style name="TextRobotoMedium">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Textmuseosans100">
+        <item name="fontPath">fonts/museosans_100.otf</item>
+    </style>
+
+    <style name="Textmuseosans300">
+        <item name="fontPath">fonts/museosans_300.otf</item>
+    </style>
+
+    <style name="Textmuseosans500">
+        <item name="fontPath">fonts/museosans_500.otf</item>
+    </style>
+
+    <style name="Textmuseosans700">
+        <item name="fontPath">fonts/museosans_700.otf</item>
+    </style>
+
+</resources>

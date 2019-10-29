@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_login_page">
+
+    <RelativeLayout
+        android:id="@+id/relative_login_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="296dp"
+            android:layout_alignParentBottom="true" />
+        <!--android:background="?attr/bg_login_shadow" !-->
+
+        <View
+            android:id="@+id/view_status_bar_spacer"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_status_bar_spacer">
+
+            <ImageView
+                android:id="@+id/image_logo_cielo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/ic_launcher_lightblue"
+                tools:ignore="ContentDescription"/>
+
+            <ImageView
+                android:id="@+id/image_logo_app"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/image_logo_cielo"
+                android:paddingLeft="30dp"
+                android:src="@drawable/ic_launcher_white_with_name"
+                tools:ignore="ContentDescription"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/box_login"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="24dp"
+            android:background="@drawable/background_gradient_credentials_box">
+
+            <TextView
+                android:id="@+id/credentials_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/museosans_700"
+                android:textSize="25dp"
+                android:enabled="false"
+                android:paddingLeft="30dp"
+                android:paddingTop="80dp"
+                android:gravity="left"
+                android:text="@string/login_box_title"
+                android:textColor="@color/white_cielo"/>
+
+            <TextView
+                android:id="@+id/credentials_welcome_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/museosans_100"
+                android:textSize="15dp"
+                android:enabled="false"
+                android:paddingLeft="30dp"
+                android:layout_below="@+id/credentials_welcome"
+                android:gravity="left"
+                android:text="@string/login_company_credentials"
+                android:textColor="@color/white_cielo"/>
+
+            <EditText
+                android:id="@+id/txt_user"
+                android:layout_below="@+id/credentials_welcome_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/login_hint_email"
+                android:fontFamily="@font/museosans_500"
+                android:inputType="textEmailAddress"
+                android:maxLength="50"
+                android:textColorHint="@color/white_cielo"
+                android:textColor="@color/white_cielo"
+                android:textSize="18sp"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:id="@+id/relative_btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/txt_user"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/background_redesign_login_button">
+
+                <TextView
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:enabled="false"
+                    android:gravity="center"
+                    android:text="@string/login_button_join"
+                    android:fontFamily="@font/museosans_700"
+                    android:textColor="@color/white_cielo"/>
+
+                <ProgressBar
+                    android:id="@+id/progress_loading"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <br.com.cielo.weather.ui.widget.BannerError
+        android:id="@+id/login_banner_error"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_banner_error_height"
+        android:visibility="gone"
+        app:banner_text="@string/login_wrong_user" />
+
+</RelativeLayout>

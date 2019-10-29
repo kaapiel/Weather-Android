@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+
+        <include layout="@layout/toolbar_not_status" />
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <br.com.cielo.weather.ui.widget.BannerError
+            android:id="@+id/banner_error"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_banner_error_height"
+            android:visibility="gone"
+            tools:banner_text="@string/search_error_minimum_letters" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/loading" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationview_home"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white_cielo"
+        android:clickable="true"
+        android:listDivider="@color/grey_cielo"
+        app:itemBackground="@color/white_cielo"
+        app:itemTextAppearance="@style/CieloReportsTheme.NavigationView.TextAppearance"
+        app:itemIconTint="@color/navigationdrawer_item_colors"
+        app:itemTextColor="@color/navigationdrawer_item_colors"
+
+        app:theme="@style/CieloReportsTheme.NavigationView">
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@color/black_cielo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <!-- BRONZE -->
+
+        <ImageView
+            android:id="@+id/bronze_medal_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_bronzemedal"/>
+
+        <ImageView
+            android:id="@+id/bronze_medal_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/bronze_medal_1"
+            android:src="@drawable/ic_bronzemedal"/>
+
+        <ImageView
+            android:id="@+id/bronze_medal_2_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/bronze_medal_2"
+            android:layout_toRightOf="@id/bronze_medal_1"
+            android:src="@drawable/ic_bronzemedal"/>
+
+        <ImageView
+            android:id="@+id/bronze_medal_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/bronze_medal_2"
+            android:src="@drawable/ic_bronzemedal"/>
+
+        <ImageView
+            android:id="@+id/bronze_medal_3_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/bronze_medal_2"
+            android:layout_below="@+id/bronze_medal_2"
+            android:src="@drawable/ic_bronzemedal"/>
+
+        <ImageView
+            android:id="@+id/bronze_medal_3_3_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/bronze_medal_2"
+            android:layout_below="@+id/bronze_medal_2_2"
+            android:src="@drawable/ic_bronzemedal"/>
+
+
+        <!-- SILVER -->
+
+
+        <ImageView
+            android:id="@+id/silver_medal_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/bronze_medal_3"
+            android:src="@drawable/ic_silvermedal"/>
+
+        <ImageView
+            android:id="@+id/silver_medal_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/silver_medal_1"
+            android:src="@drawable/ic_silvermedal"/>
+
+        <ImageView
+            android:id="@+id/silver_medal_2_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/silver_medal_2"
+            android:layout_toRightOf="@id/silver_medal_1"
+            android:src="@drawable/ic_silvermedal"/>
+
+        <ImageView
+            android:id="@+id/silver_medal_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/silver_medal_2"
+            android:src="@drawable/ic_silvermedal"/>
+
+        <ImageView
+            android:id="@+id/silver_medal_3_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/silver_medal_2"
+            android:layout_below="@+id/silver_medal_2"
+            android:src="@drawable/ic_silvermedal"/>
+
+        <ImageView
+            android:id="@+id/silver_medal_3_3_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/silver_medal_2"
+            android:layout_below="@+id/silver_medal_2_2"
+            android:src="@drawable/ic_silvermedal"/>
+
+
+        <!-- Golden Medal -->
+
+        <ImageView
+            android:id="@+id/golder_medal_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/silver_medal_3"
+            android:src="@drawable/ic_goldmedal"/>
+
+        <ImageView
+            android:id="@+id/golder_medal_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/golder_medal_1"
+            android:src="@drawable/ic_goldmedal"/>
+
+        <ImageView
+            android:id="@+id/golder_medal_2_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/golder_medal_2"
+            android:layout_toRightOf="@id/golder_medal_1"
+            android:src="@drawable/ic_goldmedal"/>
+
+        <ImageView
+            android:id="@+id/golder_medal_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/golder_medal_2"
+            android:src="@drawable/ic_goldmedal"/>
+
+        <ImageView
+            android:id="@+id/golder_medal_3_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/golder_medal_2"
+            android:layout_below="@+id/golder_medal_2"
+            android:src="@drawable/ic_goldmedal"/>
+
+        <ImageView
+            android:id="@+id/golder_medal_3_3_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/golder_medal_2"
+            android:layout_below="@+id/golder_medal_2_2"
+            android:src="@drawable/ic_goldmedal"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

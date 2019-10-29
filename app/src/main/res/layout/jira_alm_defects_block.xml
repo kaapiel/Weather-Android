@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <RelativeLayout
+        android:id="@+id/defects_title"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_black_rounded">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/museosans_700"
+            android:text="@string/system_defects_value"
+            android:textColor="@color/white_cielo"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/defects_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <RelativeLayout
+            android:id="@+id/open_defects_line"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_open_defects_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_defects_opened"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="83dp"
+                android:fontFamily="@font/museosans_700"
+                android:text="@string/system_open_defects_value"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/average_aging_line"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/open_defects_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_average_aging_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_defects_average_aging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="11dp"
+                android:fontFamily="@font/museosans_700"
+                android:text="@string/system_average_aging_value"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/total_defects_line"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/average_aging_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_total_defects_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_defects_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="11dp"
+                android:fontFamily="@font/museosans_700"
+                android:text="@string/system_total_defects_value"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/average_fix_time_line"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/total_defects_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_average_fix_time_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_defects_average_fix_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_average_fix_time_value"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

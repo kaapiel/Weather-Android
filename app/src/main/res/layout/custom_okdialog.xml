@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:id="@+id/scroll"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_gradient_transparent_logout"
+        android:id="@+id/relative">
+
+        <TextView
+            android:id="@+id/custom_okdialog_alerts_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/custom_dialog_alerts_image"
+            android:paddingTop="30dp"
+            android:gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            android:textSize="25dp"
+            android:fontFamily="@font/museosans_500"
+            android:textColor="@color/white_cielo"
+            android:text="@string/splash_jira_message" />
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_alert_dialog_button_height"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/custom_okdialog_alerts_positive_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:background="@drawable/background_gradient_transparent_logout_buttons"
+                android:fontFamily="@font/museosans_500"
+                android:text="@string/splash_redirect"
+                android:textColor="@color/white_cielo" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

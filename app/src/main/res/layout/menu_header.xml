@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/menu_header_logo_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/menu_header_logo_margin_top"
+            android:orientation="horizontal">
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/loading_header"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_centerInParent="true"
+                android:tooltipText="@string/login_retreiving_credentials"/>
+
+            <br.com.cielo.weather.ui.customs.CustomImageView
+                android:id="@+id/menu_header_logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/menu_header_hello"
+            style="@style/CieloReportsTheme.TextView.Menu.Header.Greet"
+            android:fontFamily="@font/museosans_500"
+            android:layout_below="@+id/menu_header_logo_container"
+            android:textColor="@color/black_cielo"
+            tools:text="@string/menu_header_greet" />
+
+        <TextView
+            android:id="@+id/menu_header_name_user"
+            style="@style/CieloReportsTheme.TextView.Menu.Header.Name"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_below="@+id/menu_header_hello"
+            android:fontFamily="@font/museosans_300"
+            android:textColor="@color/black_cielo"
+            tools:text="Cielo Silva" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="18dp"
+        android:background="@color/black_cielo" />
+
+</RelativeLayout>

@@ -1,0 +1,117 @@
+pipeline {
+    agent any
+    stages{
+        stage('Clone') {
+            steps {
+                //Clone do repositório
+                checkout scm
+
+                //Configurações iniciais do git
+                bat 'git config --global user.name "Jenkins"'
+                bat 'git config --global user.email "gabriel.fraga@cielo.com.br"'
+                bat 'git config --global push.default simple'
+                bat 'git checkout develop'
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                                  usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
+                    bat 'git pull https://%GIT_AUTHOR_NAME%:%GIT_PASSWORD%@corp-git.ccorp.local/qualidade-cross/android_score_app.git develop'
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                                  usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
+
+                    //Clean no projeto
+                    bat 'gradlew -Dhttp.proxyHost=proxypac -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxypac -Dhttps.proxyPort=8080 ' +
+                            '-Dhttps.proxyUser=%GIT_AUTHOR_NAME% -Dhttps.proxyPassword=%GIT_PASSWORD% -Dhttp.proxyUser=%GIT_AUTHOR_NAME% ' +
+                            '-Dhttp.proxyPassword=%GIT_PASSWORD% clean build'
+                }
+            }
+        }
+        stage('Code inspection') {
+            steps {
+                withSonarQubeEnv('Sonar') {
+
+                    //Executa o Sonar scanner e atualiza o servidor
+                    bat '"C:/Program Files/sonar-scanner-3.3.0.1492-windows/bin/sonar-scanner"'
+                }
+                timeout(time: 10, unit: 'MINUTES') {
+                    //Seta um timeout de 10 minutos para o sonar scanner. Se demorar mais do qeu 10 minutos, aborta o pipeline
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }
+        stage('QA') {
+            steps {
+
+                //Executar testes funcionais
+                build job: 'QA - Feather', parameters: [
+                        string(name: 'param1', value: "value1")
+                ]
+            }
+        }
+        stage('Promotion') {
+            steps {
+
+                //Vai para a branch release para futuras alterações nos próximos Stages
+                bat 'git checkout release'
+
+                timeout(time: 1, unit: 'MINUTES') {
+                    bat 'git merge develop'
+                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                                      usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
+                        bat 'git push https://%GIT_AUTHOR_NAME%:%GIT_PASSWORD%@corp-git.ccorp.local/qualidade-cross/android_score_app.git ' +
+                                'release'
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                                  usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
+
+                    dir(".\\app\\"){
+                        bat 'update-version.bat'
+                    }
+
+                    //Gera o apk versão RELEASE
+                    bat 'gradlew -Dhttp.proxyHost=proxypac -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxypac ' +
+                            '-Dhttps.proxyPort=8080 -Dhttps.proxyUser=%GIT_AUTHOR_NAME% -Dhttps.proxyPassword=%GIT_PASSWORD% '+
+                            '-Dhttp.proxyUser=%GIT_AUTHOR_NAME% -Dhttp.proxyPassword=%GIT_PASSWORD% assembleRelease'
+
+                    dir(".\\app\\"){
+                        bat 'update-version.bat'
+                    }
+                }
+            }
+        }
+
+        stage('Publish') {
+            steps {
+
+                //Deleta o arquivo gradle-wrapper.properties
+                bat 'del .\\gradle\\wrapper\\gradle-wrapper.properties /q'
+
+                //Acessa o Diretório do gradle wrapper
+                dir("E:\\Android\\gradle-site-plugin\\gradle\\wrapper"){
+
+                    //Copia o gradle-wrapper pois o git não sobre arquivos binários
+                    bat 'xcopy gradle-wrapper.jar "E:\\Jenkins_143\\workspace\\Android_Cielo_Reports\\gradle\\wrapper" | echo Yes'
+                    bat 'xcopy gradle-wrapper.properties "E:\\Jenkins_143\\workspace\\Android_Cielo_Reports\\gradle\\wrapper"'
+                }
+
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                                  usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
+
+                    //Faz o upload para o Crashlytics
+                    bat 'gradlew -Dhttp.proxyHost=proxypac -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxypac ' +
+                            '-Dhttps.proxyPort=8080 -Dhttps.proxyUser=%GIT_AUTHOR_NAME% -Dhttps.proxyPassword=%GIT_PASSWORD% '+
+                            '-Dhttp.proxyUser=%GIT_AUTHOR_NAME% -Dhttp.proxyPassword=%GIT_PASSWORD% ' +
+                            'crashlyticsUploadDistributionRelease'
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <RelativeLayout
+        android:id="@+id/type_issues_title"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/museosans_300"
+            android:text="@string/system_type_issues_value"
+            android:textColor="@color/white_cielo"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/type_issues_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/type_issues_barchart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+    </RelativeLayout>
+
+</RelativeLayout>

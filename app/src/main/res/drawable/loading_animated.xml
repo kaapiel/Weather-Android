@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <item android:drawable="@drawable/ic_ecommerce" android:duration="250" />
+    <item android:drawable="@drawable/ic_store" android:duration="250" />
+    <item android:drawable="@drawable/ic_user" android:duration="250" />
+    <item android:drawable="@drawable/icon_lio_v2" android:duration="250" />
+    <item android:drawable="@drawable/ic_pos" android:duration="250" />
+    <item android:drawable="@drawable/ic_lio" android:duration="250" />
+    <item android:drawable="@drawable/ic_3g" android:duration="250" />
+    <item android:drawable="@drawable/ic_wifi" android:duration="250" />
+    <item android:drawable="@drawable/ic_warn" android:duration="250" />
+    <item android:drawable="@drawable/ic_telephone" android:duration="250" />
+    <item android:drawable="@drawable/ic_talk" android:duration="250" />
+    <item android:drawable="@drawable/ic_smartmachine" android:duration="250" />
+    <item android:drawable="@drawable/ic_search" android:duration="250" />
+    <item android:drawable="@drawable/ic_right" android:duration="250" />
+    <item android:drawable="@drawable/ic_push" android:duration="250" />
+    <item android:drawable="@drawable/ic_play" android:duration="250" />
+    <item android:drawable="@drawable/ic_percent" android:duration="250" />
+    <item android:drawable="@drawable/ic_no_cash" android:duration="250" />
+    <item android:drawable="@drawable/ic_return" android:duration="250" />
+    <item android:drawable="@drawable/ic_receive_cash" android:duration="250" />
+    <item android:drawable="@drawable/ic_quotes" android:duration="250" />
+    <item android:drawable="@drawable/ic_infinity" android:duration="250" />
+    <item android:drawable="@drawable/ic_12x" android:duration="250" />
+    <item android:drawable="@drawable/ic_lock" android:duration="250" />
+    <item android:drawable="@drawable/ic_lighthouse" android:duration="250" />
+    <item android:drawable="@drawable/ic_law" android:duration="250" />
+    <item android:drawable="@drawable/ic_heart" android:duration="250" />
+    <item android:drawable="@drawable/ic_happy" android:duration="250" />
+    <item android:drawable="@drawable/ic_handshake" android:duration="250" />
+    <item android:drawable="@drawable/ic_gift" android:duration="250" />
+    <item android:drawable="@drawable/ic_geo" android:duration="250" />
+    <item android:drawable="@drawable/ic_flag" android:duration="250" />
+    <item android:drawable="@drawable/ic_facebook" android:duration="250" />
+    <item android:drawable="@drawable/ic_delivery" android:duration="250" />
+    <item android:drawable="@drawable/ic_cloud_extract" android:duration="250" />
+    <item android:drawable="@drawable/ic_check" android:duration="250" />
+    <item android:drawable="@drawable/ic_cash" android:duration="250" />
+    <item android:drawable="@drawable/ic_cards" android:duration="250" />
+    <item android:drawable="@drawable/ic_bulb" android:duration="250" />
+    <item android:drawable="@drawable/ic_calendar" android:duration="250" />
+    <item android:drawable="@drawable/ic_card" android:duration="250" />
+    <item android:drawable="@drawable/ic_48x" android:duration="250" />
+    <item android:drawable="@drawable/ic_monitor" android:duration="250" />
+
+
+
+</animation-list>

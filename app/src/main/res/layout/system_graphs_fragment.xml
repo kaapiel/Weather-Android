@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/extract_main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_transparent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="80dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/halfpiegraph_relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/halfpie_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/linegraph_relativelayout"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <RelativeLayout
+                    android:id="@+id/space"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/line_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/space"/>
+
+            </RelativeLayout>
+
+            <include layout="@layout/sonar_code_inspection_block"
+                android:id="@+id/sonar_code_inspection_block"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/linegraph_relativelayout"/>
+
+            <include layout="@layout/sonar_criticity_issues_block"
+                android:id="@+id/sonar_criticity_issues_block"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/sonar_code_inspection_block"/>
+
+            <include layout="@layout/sonar_type_issues_block"
+                android:id="@+id/sonar_type_issues_block"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/sonar_criticity_issues_block"/>
+
+            <include layout="@layout/jira_alm_functional_tests_block"
+                android:id="@+id/jira_alm_functional_tests_block"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/sonar_type_issues_block"/>
+
+            <include layout="@layout/jira_alm_defects_block"
+                android:id="@+id/jira_alm_defects_block"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/jira_alm_functional_tests_block"/>
+
+            <include layout="@layout/sdm_operational_efficiency_block"
+                android:id="@+id/sdm_operational_efficiency_block"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/jira_alm_defects_block"/>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

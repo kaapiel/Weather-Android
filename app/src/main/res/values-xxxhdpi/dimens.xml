@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Button -->
+    <dimen name="button_stroke_width">1dp</dimen>
+    <dimen name="button_border_radius">2dp</dimen>
+
+    <!-- Login -->
+    <dimen name="login_image_logo_margin_top">44.4dp</dimen>
+    <dimen name="login_content_margin_left">18.3dp</dimen>
+    <dimen name="login_content_margin_right">16.7dp</dimen>
+    <dimen name="login_cpf_email_margin_top">20.2dp</dimen>
+    <dimen name="login_password_margin_top">16.7dp</dimen>
+    <dimen name="login_button_join_margin_top">42dp</dimen>
+    <dimen name="login_button_activate_account_margin_top">10.7dp</dimen>
+    <dimen name="login_forgot_password_margin_top">44dp</dimen>
+    <dimen name="login_banner_error_height">111dp</dimen>
+    <dimen name="login_container_action_footer_margin_top">@dimen/login_forgot_password_margin_top</dimen>
+
+    <!-- Custom Alert Dialog -->
+    <dimen name="custom_alert_dialog_image_margin_top">38.1dp</dimen>
+    <dimen name="custom_alert_dialog_title_margin_top">38.5dp</dimen>
+    <dimen name="custom_alert_dialog_description_margin_top">15dp</dimen>
+    <dimen name="custom_alert_dialog_description_margin_right">40dp</dimen>
+    <dimen name="custom_alert_dialog_description_margin_left">40dp</dimen>
+    <dimen name="custom_alert_dialog_button_height">51.6dp</dimen>
+
+    <!-- Menu Header -->
+    <dimen name="menu_header_logo_margin_top">67.1dp</dimen>
+    <dimen name="menu_header_content_margin_left">20dp</dimen>
+    <dimen name="menu_header_name_margin_top">20dp</dimen>
+
+    <!-- My Account -->
+    <dimen name="my_account_content_margin_left">17.3dp</dimen>
+    <dimen name="my_account_content_margin_right">15.3dp</dimen>
+    <dimen name="my_account_banner_margin_top">24.2dp</dimen>
+    <dimen name="my_account_banner_margin_bottom">26.7dp</dimen>
+    <dimen name="my_account_banner_padding_top">14.3dp</dimen>
+    <dimen name="my_account_banner_padding_bottom">14.3dp</dimen>
+    <dimen name="my_account_banner_padding_left">30dp</dimen>
+    <dimen name="my_account_banner_padding_right">30dp</dimen>
+
+    <!-- My Account -->
+    <dimen name="my_account_item_margin_top">38.8dp</dimen>
+    <dimen name="my_account_item_margin_bottom">38.7dp</dimen>
+    <dimen name="my_account_icon_margin_left">19dp</dimen>
+    <dimen name="my_account_title_margin_left">23.3dp</dimen>
+
+    <!-- Loading -->
+    <dimen name="loading_progress_size">57dp</dimen>
+    <dimen name="loading_text_margin_top">34dp</dimen>
+
+    <!-- Mini Loading -->
+    <dimen name="mini_loading_progress_size">20dp</dimen>
+    <dimen name="mini_loading_text_margin_left">14dp</dimen>
+    <dimen name="mini_loading_margin_top">10dp</dimen>
+
+</resources>

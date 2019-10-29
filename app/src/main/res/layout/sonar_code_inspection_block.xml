@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <RelativeLayout
+        android:id="@+id/inspection_title"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_black_rounded">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/museosans_700"
+            android:text="@string/system_code_inspection_value"
+            android:textColor="@color/white_cielo"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inspection_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <RelativeLayout
+            android:id="@+id/nloc_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_nloc_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/nloc_textview_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_nloc_value"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/total_issues_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/nloc_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_total_issues_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/total_issues_textview_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_total_issues_value"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/open_issues_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/total_issues_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_open_issues_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/open_issues_textview_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_open_issues_value"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/coverage_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/open_issues_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_coverage_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/coverage_textview_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_coverage_value"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/duplications_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/coverage_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_duplications_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/duplications_textview_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_duplications_value"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

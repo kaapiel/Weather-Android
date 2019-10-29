@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <RelativeLayout
+        android:id="@+id/functional_tests_title"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/background_black_rounded">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/museosans_700"
+            android:text="@string/system_functional_tests_value"
+            android:textColor="@color/white_cielo"
+            android:textSize="30dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/functional_tests_title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+        <RelativeLayout
+            android:id="@+id/test_cases_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_test_cases_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_functional_tests_cases_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_test_cases_value"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/total_executions_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/test_cases_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_total_executions_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_functional_tests_total_executions_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="92dp"
+                android:fontFamily="@font/museosans_700"
+                android:text="@string/system_total_executions_value"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ok_executions_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/total_executions_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_ok_executions_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_functional_tests_ok_executions_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="52dp"
+                android:fontFamily="@font/museosans_700"
+                android:text="@string/system_ok_executions_value"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/success_rate_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ok_executions_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_success_rate_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_functional_tests_success_rate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="@font/museosans_700"
+                android:text="@string/system_success_rate_value"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/defects_density_line"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/success_rate_line">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_defects_density_key"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentLeft="true"/>
+
+            <TextView
+                android:id="@+id/jira_alm_functional_tests_defects_density_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/system_defects_density_value"
+                android:fontFamily="@font/museosans_700"
+                android:textColor="@color/black_cielo"
+                android:textSize="20dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

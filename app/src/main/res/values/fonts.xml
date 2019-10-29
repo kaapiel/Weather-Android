@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--  Toolbar Title -->
+    <dimen name="toolbar_title">20sp</dimen>
+
+    <!--  Tutorial -->
+    <dimen name="tutorial_join_now">13sp</dimen>
+    <dimen name="tutorial_activate_account">13sp</dimen>
+    <dimen name="tutorial_title">22sp</dimen>
+    <dimen name="tutorial_subtitle">15sp</dimen>
+
+    <!--  Banner Erro -->
+    <dimen name="banner_error">14.3sp</dimen>
+
+    <!--  Login -->
+    <dimen name="login_cpf_email">19sp</dimen>
+    <dimen name="login_password">19sp</dimen>
+    <dimen name="login_button_join">18.7sp</dimen>
+    <dimen name="login_button_activate_account">18.7sp</dimen>
+    <dimen name="login_forgot_password">13.3sp</dimen>
+
+    <!-- Custom Alert Dialog -->
+    <dimen name="custom_alert_dialog_title">20sp</dimen>
+    <dimen name="custom_alert_dialog_description">13.3sp</dimen>
+    <dimen name="custom_alert_dialog_button">13.3sp</dimen>
+
+    <!-- Home -->
+    <dimen name="menu_header_name_text_size">20dp</dimen>
+    <dimen name="home_navigationview_text_size">18.7sp</dimen>
+
+    <!-- My Info -->
+    <dimen name="my_info_banner_text_size">13.3sp</dimen>
+    <dimen name="my_info_banner_site_text_size">16.7sp</dimen>
+
+    <!-- My Account -->
+    <dimen name="my_account_title_text_size">18.5sp</dimen>
+
+    <!-- Loading -->
+    <dimen name="loading_text_size">13.3sp</dimen>
+
+    <!-- Forgot Password -->
+    <dimen name="forgot_password_title_text_size">14sp</dimen>
+
+    <!-- Change Password -->
+    <dimen name="change_password_descripton_text_size">15sp</dimen>
+
+    <!-- Branding Bank -->
+    <dimen name="branding_bank_title_text_size">22sp</dimen>
+
+</resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/cielo_blue">
+
+    <TextView
+        android:id="@+id/position_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/museosans_700"
+        android:text="@string/sym_ranking_position"
+        android:textSize="25dp"
+        android:textColor="@color/white_cielo"/>
+
+    <com.rey.material.widget.ImageView
+        android:id="@+id/system_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="60dp"
+        />
+
+    <com.rey.material.widget.ImageView
+        android:id="@+id/medal_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/system_icon">
+
+        <TextView
+            android:id="@+id/card_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="20dp"
+            android:textColor="@color/white_cielo"
+            android:fontFamily="@font/museosans_700"
+            android:text="0.0" />
+
+        <TextView
+            android:id="@+id/system_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/card_rate"
+            android:fontFamily="@font/museosans_500"
+            android:text="@string/ranking_system_name"
+            android:textSize="20dp"
+            android:textColor="@color/white_cielo"/>
+
+    </RelativeLayout>
+    
+</RelativeLayout>

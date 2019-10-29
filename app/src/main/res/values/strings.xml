@@ -1,0 +1,179 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="app_name_upper">WEATHER APP</string>
+    <string name="wait_updating_information">Aguarde, atualizando informações.</string>
+    <string name="score_uppercase">SCORE</string>
+    <string name="score_lowercase">score</string>
+
+    <!-- icons -->
+    <string name="tabbar_attendance_icon"></string>
+    <string name="login_footer_map_icon"></string>
+    <string name="login_footer_itoken_icon"></string>
+
+    <!-- Login -->
+    <string name="login_box_title">Login Cielo</string>
+    <string name="login_hint_user">Usuário</string>
+    <string name="login_hint_email">E-mail</string>
+    <string name="login_hint_password">Senha</string>
+    <string name="login_button_join">Login</string>
+    <string name="login_button_sair">Sair</string>
+    <string name="login_wrong_user">E-mail inválido.</string>
+    <string name="login_wrong_email">Há algum problema com o seu e-mail.\nEntre em contato com o service desk Cielo.</string>
+    <string name="login_empty_credentials">Suas credenciais não podem estar vazias!</string>
+    <string name="login_jenkins_auth">Houve algum erro no servidor da cielo</string>
+    <string name="login_prestador_error">Prestador não autorizado.</string>
+    <string name="login_company_credentials">Entre com o seu e-mail</string>
+    <string name="login_retreiving_credentials">Obtendo usuário&#8230;</string>
+
+    <!-- Splash -->
+    <string name="splash_redirect">OK</string>
+    <string name="splash_jira_message">Para realizar o primeiro acesso, é necessário utilizar o seu Jira Access Token. Você será direcionado&#8230;</string>
+
+    <!-- Geolocation -->
+    <string name="geolocation_title">GEOLOCALIZAÇÃO</string>
+    <string name="geolocation_description">Para oferecer uma experiência completa, precisamos saber onde você está, tudo bem?</string>
+    <string name="geolocation_option_no">Não</string>
+    <string name="geolocation_option_yes">Sim</string>
+
+    <!-- Connection Error -->
+    <string name="connection_error_title">ERRO DE CONEXÃO</string>
+    <string name="connection_error_option_no">Não</string>
+    <string name="connection_error_description">Ops, precisamos de internet para\nprosseguir e não detectamos nenhuma conexão.</string>
+    <string name="connection_error_option_try_again">Tentar Novamente</string>
+
+    <!-- Generic Error -->
+    <string name="generic_error_title">OPS</string>
+    <string name="generic_error_description">Ops, tivemos um problema.</string>
+    <string name="generic_error_option_try_again">Tentar Novamente</string>
+
+    <!-- Open URl -->
+    <string name="open_url_title">ATENÇÃO!</string>
+    <string name="open_url_description">Você será direcionado para o site da cielo. Deseja continuar?</string>
+    <string name="open_url_option_positive">Sim</string>
+    <string name="open_url_option_negative">Não</string>
+
+    <!-- Error Generic -->
+    <string name="error_generic_description">Algo deu errado.\nTente novamente mais tarde.</string>
+    <string name="error_generic_option_positive">Tentar novamente</string>
+    <string name="error_generic_option_negative">Cancelar</string>
+
+    <!-- Menu -->
+    <string name="menu_item_home">Início</string>
+    <string name="menu_item_my_data">Meus Dados</string>
+    <string name="menu_item_exit">Sair</string>
+    <string name="menu_header_greet">Olá,</string>
+
+    <!-- Dialog -->
+    <string name="dialog_logout_descrition">Deseja sair\ndo aplicativo?</string>
+    <string name="dialog_feedback_descrition">O seu feedback nos ajuda muito!</string>
+    <string name="dialog_feedback_subdescrition">Diga-nos o que podemos fazer para melhorar</string>
+    <string name="dialog_rating_descrition">Gostou do app? Então nos avalie :)</string>
+    <string name="dialog_thanks_descrition">Obrigado!</string>
+    <string name="dialog_positive_option">Sim</string>
+    <string name="dialog_negative_option">Não</string>
+    <string name="dialog_cancel_option">Cancelar</string>
+    <string name="dialog_send_option">Enviar</string>
+    <string name="dialog_ok_option">OK</string>
+    <string name="dialog_push_go_to_app">Abrir App</string>
+    <string name="dialog_push_ignore">Ignorar</string>
+    <string name="dialog_push_warning">Aviso</string>
+    <string name="dialog_push_warning_description">Mensagem enviada via push</string>
+
+
+    <string name="logout_session_expired_title">SESSÃO EXPIRADA</string>
+    <string name="logout_session_expired_desc">Sua sessão expirou.\nLogue novamente</string>
+    <string name="logout_session_expired_option">Login</string>
+
+    <!-- Loading -->
+    <string name="loading_text">Carregando&#8230;</string>
+    <string name="mini_loading_text">Atualizando Informações&#8230;</string>
+
+    <string name="drawer_open_desc">open</string>
+    <string name="drawer_close_desc">close</string>
+
+    <!-- Graphs infos -->
+    <string name="no_defects_text">Não há defeitos a serem apresentados nesta categoria</string>
+    <string name="no_graph_data_text">Não há dados a serem apresentados para a execução selecionada</string>
+
+    <!-- Ranking -->
+    <string name="ranking_image_description">Imagem do ranking</string>
+    <string name="ranking_system_name">Sistema</string>
+
+    <!-- Symbols -->
+    <string name="sym_number_o">º</string>
+    <string name="sym_ranking_position">Pº</string>
+
+    <!-- Sistemas -->
+    <string name="system_image_description">Imagem do Sistema</string>
+    <string name="system_code_lines_title">Lines</string>
+    <string name="system_issues_title">Issues</string>
+    <string name="system_bugs_title">Bugs</string>
+    <string name="system_code_lines_value">7.4M</string>
+    <string name="system_issues_value">492k</string>
+    <string name="system_bugs_value">388</string>
+    <string name="system_overall_title">Overall</string>
+    <string name="system_systems_title">System</string>
+    <string name="systems_last_updated">Atualizado em </string>
+    <string name="system_code_inspection_value">Inspeção de código</string>
+    <string name="system_criticity_issues_value">Issues por Criticidade</string>
+    <string name="system_type_issues_value">Issues por Tipo</string>
+    <string name="system_defects_value">Defeitos</string>
+    <string name="system_functional_efficiency_value">Eficácia Funcional</string>
+    <string name="system_functional_tests_value">Testes Funcionais</string>
+
+
+    <!-- Code inspection -->
+    <string name="system_nloc_key">Nloc</string>
+    <string name="system_nloc_value">2.3M</string>
+    <string name="system_total_issues_key">Total Issues</string>
+    <string name="system_total_issues_value">194k</string>
+    <string name="system_open_issues_key">Open Issues</string>
+    <string name="system_open_issues_value">91k</string>
+    <string name="system_coverage_key">Coverage</string>
+    <string name="system_coverage_value">38.7%</string>
+    <string name="system_duplications_key">Duplications</string>
+    <string name="system_duplications_value">11.7%</string>
+
+    <!-- Functional Tests -->
+    <string name="system_test_cases_key">Casos de Teste</string>
+    <string name="system_test_cases_value">21</string>
+    <string name="system_total_executions_key">Total de Execuções</string>
+    <string name="system_total_executions_value">34</string>
+    <string name="system_ok_executions_key">Execuções OK</string>
+    <string name="system_ok_executions_value">30</string>
+    <string name="system_success_rate_key">Taxa de Sucesso</string>
+    <string name="system_success_rate_value">89.7%</string>
+    <string name="system_defects_density_key">Densidade Def.</string>
+    <string name="system_defects_density_value">0.8%</string>
+
+    <!-- Defects -->
+    <string name="system_open_defects_key">Defeitos Abertos</string>
+    <string name="system_open_defects_value">45</string>
+    <string name="system_average_aging_key">Aging Médio (dias)</string>
+    <string name="system_average_aging_value">18.6</string>
+    <string name="system_total_defects_key">Total de Defeitos</string>
+    <string name="system_total_defects_value">262</string>
+    <string name="system_average_fix_time_key">Fix Time Médio (dias)</string>
+    <string name="system_average_fix_time_value">27.1</string>
+
+    <!-- Eficácia Funcional -->
+    <string name="system_problems_key">Problemas</string>
+    <string name="system_problems_value">1</string>
+    <string name="system_efficiency_key">Eficácia</string>
+    <string name="system_efficiency_value">99.6%</string>
+
+    <!-- HTTP Requests -->
+    <string name="system_info_connect">Conecte-se à rede corporativa.</string>
+    <string name="splash_wifi_connect">Conecte-se à rede corporativa. O aplicativo será fechado.</string>
+    <string name="splash_wifi_denied">Ative a localização para acessar a rede corporativa. O aplicativo será fechado.</string>
+
+    <!-- SideMenu options -->
+    <string name="menu_sistemas">Sistemas</string>
+    <string name="menu_ranking">Ranking</string>
+    <string name="menu_scores">Scores</string>
+    <string name="menu_config">Configurações</string>
+    <string name="menu_pref">Preferências</string>
+    <string name="menu_sugest">Sugestões</string>
+    <string name="menu_sair">Sair</string>
+
+</resources>
