@@ -8,22 +8,22 @@ pipeline {
 
                 //Configurações iniciais do git
                 bat 'git config --global user.name "Jenkins"'
-                bat 'git config --global user.email "gabriel.fraga@cielo.com.br"'
+                bat 'git config --global user.email "gabriel_aguido@hotmail.com"'
                 bat 'git config --global push.default simple'
                 bat 'git checkout develop'
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'JenkinsCredentialsId',
                                   usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
-                    bat 'git pull https://%GIT_AUTHOR_NAME%:%GIT_PASSWORD%@corp-git.ccorp.local/qualidade-cross/android_score_app.git develop'
+                    bat 'git pull https://%GIT_AUTHOR_NAME%:%GIT_PASSWORD%@github.com/groupId/android_score_app.git develop'
                 }
             }
         }
         stage('Build') {
             steps {
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'JenkinsCredentialsId',
                                   usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
 
                     //Clean no projeto
-                    bat 'gradlew -Dhttp.proxyHost=proxypac -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxypac -Dhttps.proxyPort=8080 ' +
+                    bat 'gradlew -Dhttp.proxyHost=HOST -Dhttp.proxyPort=PORT -Dhttps.proxyHost=HOST -Dhttps.proxyPort=PORT ' +
                             '-Dhttps.proxyUser=%GIT_AUTHOR_NAME% -Dhttps.proxyPassword=%GIT_PASSWORD% -Dhttp.proxyUser=%GIT_AUTHOR_NAME% ' +
                             '-Dhttp.proxyPassword=%GIT_PASSWORD% clean build'
                 }
@@ -46,7 +46,7 @@ pipeline {
             steps {
 
                 //Executar testes funcionais
-                build job: 'QA - Feather', parameters: [
+                build job: 'QA', parameters: [
                         string(name: 'param1', value: "value1")
                 ]
             }
@@ -59,9 +59,9 @@ pipeline {
 
                 timeout(time: 1, unit: 'MINUTES') {
                     bat 'git merge develop'
-                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                    withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'JenkinsCredentialsId',
                                       usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
-                        bat 'git push https://%GIT_AUTHOR_NAME%:%GIT_PASSWORD%@corp-git.ccorp.local/qualidade-cross/android_score_app.git ' +
+                        bat 'git push https://%GIT_AUTHOR_NAME%:%GIT_PASSWORD%@github.com/groupId/android_score_app.git ' +
                                 'release'
                     }
                 }
@@ -69,7 +69,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'JenkinsCredentialsId',
                                   usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
 
                     dir(".\\app\\"){
@@ -77,8 +77,8 @@ pipeline {
                     }
 
                     //Gera o apk versão RELEASE
-                    bat 'gradlew -Dhttp.proxyHost=proxypac -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxypac ' +
-                            '-Dhttps.proxyPort=8080 -Dhttps.proxyUser=%GIT_AUTHOR_NAME% -Dhttps.proxyPassword=%GIT_PASSWORD% '+
+                    bat 'gradlew -Dhttp.proxyHost=HOST -Dhttp.proxyPort=PORT -Dhttps.proxyHost=HOST ' +
+                            '-Dhttps.proxyPort=PORT -Dhttps.proxyUser=%GIT_AUTHOR_NAME% -Dhttps.proxyPassword=%GIT_PASSWORD% '+
                             '-Dhttp.proxyUser=%GIT_AUTHOR_NAME% -Dhttp.proxyPassword=%GIT_PASSWORD% assembleRelease'
 
                     dir(".\\app\\"){
@@ -98,16 +98,16 @@ pipeline {
                 dir("E:\\Android\\gradle-site-plugin\\gradle\\wrapper"){
 
                     //Copia o gradle-wrapper pois o git não sobre arquivos binários
-                    bat 'xcopy gradle-wrapper.jar "E:\\Jenkins_143\\workspace\\Android_Cielo_Reports\\gradle\\wrapper" | echo Yes'
-                    bat 'xcopy gradle-wrapper.properties "E:\\Jenkins_143\\workspace\\Android_Cielo_Reports\\gradle\\wrapper"'
+                    bat 'xcopy gradle-wrapper.jar "E:\\Jenkins_143\\workspace\\Android_Reports\\gradle\\wrapper" | echo Yes'
+                    bat 'xcopy gradle-wrapper.properties "E:\\Jenkins_143\\workspace\\Android_Reports\\gradle\\wrapper"'
                 }
 
-                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: '82aa99fd-e0df-426e-8c6c-20bcf1983ec0',
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'JenkinsCredentialsId',
                                   usernameVariable: 'GIT_AUTHOR_NAME', passwordVariable: 'GIT_PASSWORD']]){
 
                     //Faz o upload para o Crashlytics
-                    bat 'gradlew -Dhttp.proxyHost=proxypac -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxypac ' +
-                            '-Dhttps.proxyPort=8080 -Dhttps.proxyUser=%GIT_AUTHOR_NAME% -Dhttps.proxyPassword=%GIT_PASSWORD% '+
+                    bat 'gradlew -Dhttp.proxyHost=HOST -Dhttp.proxyPort=PORT -Dhttps.proxyHost=HOST ' +
+                            '-Dhttps.proxyPort=PORT -Dhttps.proxyUser=%GIT_AUTHOR_NAME% -Dhttps.proxyPassword=%GIT_PASSWORD% '+
                             '-Dhttp.proxyUser=%GIT_AUTHOR_NAME% -Dhttp.proxyPassword=%GIT_PASSWORD% ' +
                             'crashlyticsUploadDistributionRelease'
                 }
