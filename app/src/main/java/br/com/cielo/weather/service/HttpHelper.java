@@ -90,7 +90,7 @@ public class HttpHelper {
 
         try {
             //trustAllHosts();
-            URL url = new URL("https://jiracielo.atlassian.net/rest/api/latest/user?username="+(user.split("@")[0]));
+            URL url = new URL("https://jira.atlassian.net/rest/api/latest/user?username="+(user.split("@")[0]));
             HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
             conn = setCertificate(conn);
 
@@ -107,7 +107,7 @@ public class HttpHelper {
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Content-Type", "application/json");
             //conn.setRequestProperty("Authorization", "Basic "+new BuildAuthBase64().getAuthBase64(user, pass));
-            conn.setRequestProperty("Authorization", "Basic dDIxMDZyc25AcHJlc3RhZG9yY2JtcC5jb20uYnI6R3FGMzZrNVI4ZDJWUzVna1VjSVpCMjE3");
+            conn.setRequestProperty("Authorization", "Basic base64");
             //conn.setHostnameVerifier(DO_NOT_VERIFY);
 
             if (conn.getResponseCode() >= HttpURLConnection.HTTP_OK && conn.getResponseCode() < HttpURLConnection.HTTP_MULT_CHOICE) {
@@ -203,7 +203,7 @@ public class HttpHelper {
     public String tableauAuth(String user, String pass) throws IOException {
 
         trustAllHosts();
-        URL url = new URL("https://tableau.cielocorporativo.com.br/api/2.8/auth/signin");
+        URL url = new URL("https://tableau.com.br/api/2.8/auth/signin");
         HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Content-Type", "application/xml");
@@ -243,7 +243,7 @@ public class HttpHelper {
     public String getViewData(String authToken) throws IOException {
 
         trustAllHosts();
-        URL url = new URL("https://tableau.cielocorporativo.com.br/api/2/sites/#/views/DashboarddeQualidadev0_0_3/Dashboard/data");
+        URL url = new URL("https://tableau.com.br/api/2/sites/#/views/dashboard/Dashboard/data");
         HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.setRequestProperty("X-Tableau-Auth", authToken);
