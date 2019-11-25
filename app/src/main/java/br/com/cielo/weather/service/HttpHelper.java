@@ -50,7 +50,7 @@ public class HttpHelper {
     public User tryLogin(String user, String pass) {
 
         try {
-            URL url = new URL("https://jiracielo.atlassian.net/rest/api/3/myself");
+            URL url = new URL("https://jira.atlassian.net/rest/api/3/myself");
             HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Authorization", "Basic " + new BuildAuthBase64().getAuthBase64(user, pass));
