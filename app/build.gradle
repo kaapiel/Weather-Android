@@ -36,52 +36,29 @@ android {
         }
     }
 
-    def versionPropsFile = file('version.properties')
-    def code
+    defaultConfig {
 
-    if (versionPropsFile.canRead()) {
+        applicationId "br.com.aguido.weather"
+        minSdkVersion 15
+        targetSdkVersion 28
+        minSdkVersion 16
+        versionCode 1
+        versionName "1"
+        multiDexEnabled = true
 
-        Properties versionProps = new Properties()
-        versionProps.load(new FileInputStream(versionPropsFile))
-
-        try {
-            code = versionProps['VERSION_CODE'].toInteger() + 1
-        } catch (Exception e) {
-            e.printStackTrace()
-            versionProps.setProperty('VERSION_CODE', '0')
-            code = versionProps['VERSION_CODE'].toInteger() + 1
+        ndk {
+            moduleName "Criptohelper"
         }
 
-        versionProps['VERSION_CODE'] = code.toString()
-        versionProps.store(versionPropsFile.newWriter(), null)
-
-        defaultConfig {
-
-            applicationId "br.com.aguido.weather"
-            minSdkVersion 15
-            targetSdkVersion 28
-            minSdkVersion 16
-            versionCode code
-            versionName "v1." + code
-            multiDexEnabled = true
-
-            ndk {
-                moduleName "Criptohelper"
-            }
-
-            sourceSets.main {
-                jni.srcDirs = []
-                jniLibs.srcDir 'src/main/libs'
-            }
-
-            compileOptions {
-                sourceCompatibility JavaVersion.VERSION_1_8
-                targetCompatibility JavaVersion.VERSION_1_8
-            }
+        sourceSets.main {
+            jni.srcDirs = []
+            jniLibs.srcDir 'src/main/libs'
         }
 
-    } else {
-        throw new GradleException("Não foi possível ler o arquivo version.properties!")
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
     }
 
     buildTypes {
