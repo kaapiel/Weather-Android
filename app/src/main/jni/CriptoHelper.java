@@ -1,4 +1,4 @@
-package br.com.cielo.weather.appManagement;
+package br.com.aguido.weather.appManagement;
 
 import android.animation.ValueAnimator;
 import android.os.Build;

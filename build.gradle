@@ -1,16 +1,11 @@
 buildscript {
     ext.kotlin_version = '1.0.0'
     repositories {
-        maven { url "http://10.182.30.159:8081/repository/maven-public/" }
-        maven { url "http://10.182.30.159:8081/repository/fabricandroid-release/" }
-        maven { url "http://10.182.30.159:8081/repository/googleandroid-release/" }
-        maven { url "http://10.182.30.159:8081/repository/jitpack/" }
-        maven { url "http://10.182.30.159:8081/repository/jcenter-cache/"
-            content {
-                excludeGroupByRegex "com\\.mongodb.*"
-            }
-        }
-        maven { url "http://10.182.30.159:8081/repository/qa-release" }
+        mavenCentral()
+        maven { url "https://maven.fabric.io/public" }
+        google()
+        maven { url 'https://jitpack.io' }
+        jcenter()
 
         dependencies {
             classpath 'com.android.tools.build:gradle:3.4.2'
@@ -23,14 +18,10 @@ buildscript {
 
 allprojects {
     repositories {
-        maven { url "http://10.182.30.159:8081/repository/qa-release" }
-        maven { url "http://10.182.30.159:8081/repository/maven-public" }
-        maven { url "http://10.182.30.159:8081/repository/jitpack" }
-        maven { url "http://10.182.30.159:8081/repository/jcenter-cache"
-            content {
-                excludeGroupByRegex "com\\.mongodb.*"
-            }
-        }
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        jcenter()
+        google()
     }
 }
 

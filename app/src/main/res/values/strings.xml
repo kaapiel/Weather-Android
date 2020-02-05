@@ -18,10 +18,10 @@
     <string name="login_button_join">Login</string>
     <string name="login_button_sair">Sair</string>
     <string name="login_wrong_user">E-mail inválido.</string>
-    <string name="login_wrong_email">Há algum problema com o seu e-mail.\nEntre em contato com o service desk Cielo.</string>
+    <string name="login_wrong_email">Há algum problema com o seu e-mail.\nEntre em contato com o service desk da sua empresa.</string>
     <string name="login_empty_credentials">Suas credenciais não podem estar vazias!</string>
-    <string name="login_jenkins_auth">Houve algum erro no servidor da cielo</string>
-    <string name="login_prestador_error">Prestador não autorizado.</string>
+    <string name="login_jenkins_auth">Houve algum erro no servidor da empresa</string>
+    <string name="login_prestador_error">Prestador de serviços não autorizado.</string>
     <string name="login_company_credentials">Entre com o seu e-mail</string>
     <string name="login_retreiving_credentials">Obtendo usuário&#8230;</string>
 
@@ -48,7 +48,7 @@
 
     <!-- Open URl -->
     <string name="open_url_title">ATENÇÃO!</string>
-    <string name="open_url_description">Você será direcionado para o site da cielo. Deseja continuar?</string>
+    <string name="open_url_description">Você será direcionado para o site da empresa. Deseja continuar?</string>
     <string name="open_url_option_positive">Sim</string>
     <string name="open_url_option_negative">Não</string>
 
