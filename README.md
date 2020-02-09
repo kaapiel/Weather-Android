@@ -1,28 +1,76 @@
-# Reports App #
+![banner](https://raw.github.com/kaapiel/Raw-content/master/Automation-Python/app.png)
 
-Este é o repositório do código fonte do app dashboard para android.
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=alert_status)](https://sonarcloud.io/dashboard?id=alm-integration-java)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=ncloc)](https://sonarcloud.io/dashboard?id=alm-integration-java)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=alm-integration-java)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=alm-integration-java)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=security_rating)](https://sonarcloud.io/dashboard?id=alm-integration-java)
+![CircleCI](https://img.shields.io/circleci/build/github/kaapiel/ALMIntegration-Java/master)
+[![API](https://img.shields.io/badge/API-26%2B-green.svg?style=flat)](https://android-arsenal.com/api?level=26)
 
-### Contribua conosco ###
+A powerful & easy to use library for Android
 
-* A nossa política de code review está em construção
+## Table of Contents
+1. [Quick Start](#quick-start)
+1. [Example usage](#examples)
+1. [Questions](#report)
+1. [Donate](#donate)
+1. [License](#licence)
+1. [Creators](#creators)
 
-## 1 - Ferramentas e tecnologias ##
+<h2 id="quick-start">Quick Start :chart_with_upwards_trend:</h2>
+Add the library to your Android project, then check out the examples below!
 
-Estas são as tecnologias e estruturas que utilizamos no projeto:
-- Android/Java 8
-- Gradle
-- MPChartLib
-			
-## 2 - Resultados de gráficos ##
+<br/>
 
-Todas as informações geradas neste app está baseada no Jira, Jenkins, ALM e SonarQube.
-* O Score do sistema (Half Pie) é gerado baseado no cálculo da média de todas as mpetricas do sistema.
-* O histórico do Score (Line Chart) é beaseado na nota que o sistema tem ao longo do tempo.
-* Os tipos de issues (Horizontal bar chart) são obtidos do SonarQube.
-* Os issues pro criticidade (Bar chart) são obtidos do SonarQube.
+<h2 id="examples">Examples :eyes:</h2>
 
-## 3 - Pre requisitos ##
+![banner](https://raw.github.com/kaapiel/Raw-content/master/Automation-Python/app.png)
+![banner](https://raw.github.com/kaapiel/Raw-content/master/Automation-Python/app.png)
+![banner](https://raw.github.com/kaapiel/Raw-content/master/Automation-Python/app.png)
+![banner](https://raw.github.com/kaapiel/Raw-content/master/Automation-Python/app.png)
 
-* 1 - Para poder utilizar o app, serao nessarias as suas credenciais (usuário e senha).
-* 2 - É necessario estar conectado na rede interna da empresa (SIGMA)
-* 3 - É necessário estar inserido no grupo de firewall G_WIFI_SIGMA
+<br/>
+
+<h2 id="report">Questions & Issues :thinking:</h2>
+
+This repository's issue tracker is only for bugs and feature requests.  
+
+<br/>
+
+<h2 id="donate">Donations :heart:</h2>
+
+*This project needs you!* If you would like to support this project's further development, the creator of this project or the continuous maintenance of this project, *feel free to donate*. Your donation is highly appreciated (and I love food experiences). Thank you!
+
+*PayPal*
+
+- Do you ever though about paying a coffee, lunch or dinner for maintaining the project? [*So please click on this link*](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=gabriel_aguido@hotmail.com&lc=US&item_name=Donation+to+Wearever+You+Are+Android+Maintenance&no_note=0&cn=&currency_code=USD&bn=PP-DonationsBF:btn_donateCC_LG.gif:NonHosted), all donations are awesome!
+
+<br/>
+
+<h1 id="license">License :page_facing_up:</h1>
+
+Copyright 2019 Gabriel Aguido Fraga
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+> http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+<br/>
+
+<h2 id="creators">Special Thanks :heart:</h2>
+
+These people rock!
+
+- [Daniel Marques](https://www.linkedin.com/in/dmarques) - Who helped me and encouraged me to take steps further
+- [Rodrigo Franchi](https://www.linkedin.com/in/rodrigo-franchi-817b9339) - Who gave lots of ideas and several ways to solve problems
+- [Rafael Barriento](https://www.linkedin.com/in/rafael-barriento-de-goes-8014b1b1) - Who gave me tons of tech insights to create innovative solutions
+- [Diogo Julião](https://www.linkedin.com/in/diogo-oliveira-4b7a96128) - Who encourage me to whatever ideia i had as an outstading one
