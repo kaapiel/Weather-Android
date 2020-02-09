@@ -1,14 +1,17 @@
 ![banner](https://raw.github.com/kaapiel/Raw-content/master/Automation-Python/app.png)
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=alert_status)](https://sonarcloud.io/dashboard?id=alm-integration-java)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=ncloc)](https://sonarcloud.io/dashboard?id=alm-integration-java)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=alm-integration-java)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=alm-integration-java)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=alm-integration-java&metric=security_rating)](https://sonarcloud.io/dashboard?id=alm-integration-java)
-![CircleCI](https://img.shields.io/circleci/build/github/kaapiel/ALMIntegration-Java/master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=weather-android&metric=alert_status)](https://sonarcloud.io/dashboard?id=weather-android)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=weather-android&metric=ncloc)](https://sonarcloud.io/dashboard?id=weather-android)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=weather-android&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=weather-android)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=weather-android&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=weather-android)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=weather-android&metric=security_rating)](https://sonarcloud.io/dashboard?id=weather-android)
+![CircleCI](https://img.shields.io/circleci/build/github/kaapiel/Weather-Android/master)
 [![API](https://img.shields.io/badge/API-26%2B-green.svg?style=flat)](https://android-arsenal.com/api?level=26)
 
-A powerful & easy to use library for Android
+# Weather Android
+A powerful & easy to use Android app for quaity management!
+
+You can found the iOS version of this app [here](https://github.com/kaapiel/Weather-iOS)
 
 ## Table of Contents
 1. [Quick Start](#quick-start)
@@ -19,7 +22,7 @@ A powerful & easy to use library for Android
 1. [Creators](#creators)
 
 <h2 id="quick-start">Quick Start :chart_with_upwards_trend:</h2>
-Add the library to your Android project, then check out the examples below!
+Install this app and replace jira/sonar/jenkins servers urls!
 
 <br/>
 
@@ -65,12 +68,3 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 <br/>
-
-<h2 id="creators">Special Thanks :heart:</h2>
-
-These people rock!
-
-- [Daniel Marques](https://www.linkedin.com/in/dmarques) - Who helped me and encouraged me to take steps further
-- [Rodrigo Franchi](https://www.linkedin.com/in/rodrigo-franchi-817b9339) - Who gave lots of ideas and several ways to solve problems
-- [Rafael Barriento](https://www.linkedin.com/in/rafael-barriento-de-goes-8014b1b1) - Who gave me tons of tech insights to create innovative solutions
-- [Diogo Julião](https://www.linkedin.com/in/diogo-oliveira-4b7a96128) - Who encourage me to whatever ideia i had as an outstading one
