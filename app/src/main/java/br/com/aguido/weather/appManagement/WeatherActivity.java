@@ -254,7 +254,7 @@ public class WeatherActivity extends AppCompatActivity {
 
     protected void configSharedPreferences(List<ScoreResults> appList, SharedPreferences preferences) {
 
-        //APP - APP CIELO
+        //APP - APP WEATHER
         ScoreHistory appScoreHistory = new ScoreHistory();
         List<ScoreHistoryUnit> scoresApp = new ArrayList<>();
 
@@ -262,7 +262,7 @@ public class WeatherActivity extends AppCompatActivity {
         ScoreHistory accScoreHistory = new ScoreHistory();
         List<ScoreHistoryUnit> scoresAcc = new ArrayList<>();
 
-        //CIELO PAY - PTO CORE
+        //WEATER PAY - PTO CORE
         ScoreHistory cieloPayScoreHistory = new ScoreHistory();
         List<ScoreHistoryUnit> scoresCieloPay = new ArrayList<>();
 
@@ -332,13 +332,13 @@ public class WeatherActivity extends AppCompatActivity {
             ScoreHistoryUnit shu;
 
             switch (sr.getApplicationName()){
-                case Constants.Systems.APP_CIELO:
+                case Constants.Systems.APP_WEATHER:
                     sr.setSysIcon(R.drawable.ic_smartmachine);
                     shu = new ScoreHistoryUnit();
                     shu.setDate(sr.get_id().getDate());
                     shu.setScore(sr.getScore());
                     scoresApp.add(shu);
-                    appScoreHistory.setSysName(Constants.Systems.APP_CIELO);
+                    appScoreHistory.setSysName(Constants.Systems.APP_WEATHER);
                     break;
                 case Constants.Systems.CENTRALIZADOR_ACC_RANGE:
                     sr.setSysIcon(R.drawable.ic_card);
@@ -348,14 +348,14 @@ public class WeatherActivity extends AppCompatActivity {
                     scoresAcc.add(shu);
                     accScoreHistory.setSysName(Constants.Systems.CENTRALIZADOR_ACC_RANGE);
                     break;
-                case Constants.Systems.CIELO_PAY_PTO_CORE:
+                case Constants.Systems.WEATHER_PAY_PTO_CORE:
                     sr.setSysIcon(R.drawable.ic_cards);
                     sr.setSysIcon(R.drawable.ic_receive_cash);
                     shu = new ScoreHistoryUnit();
                     shu.setDate(sr.get_id().getDate());
                     shu.setScore(sr.getScore());
                     scoresCieloPay.add(shu);
-                    cieloPayScoreHistory.setSysName(Constants.Systems.CIELO_PAY_PTO_CORE);
+                    cieloPayScoreHistory.setSysName(Constants.Systems.WEATHER_PAY_PTO_CORE);
                     break;
                 case Constants.Systems.CREDENCIAMENTO:
                     sr.setSysIcon(R.drawable.ic_check);
@@ -521,7 +521,7 @@ public class WeatherActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(Constants.SharedPreferences.APP_HISTORY, new Gson().toJson(appScoreHistory));
         editor.putString(Constants.SharedPreferences.CENTRALIZADOR_HISTORY, new Gson().toJson(accScoreHistory));
-        editor.putString(Constants.SharedPreferences.CIELO_PAY_PTO_CORE_HISTORY, new Gson().toJson(cieloPayScoreHistory));
+        editor.putString(Constants.SharedPreferences.WEATHER_PAY_PTO_CORE_HISTORY, new Gson().toJson(cieloPayScoreHistory));
         editor.putString(Constants.SharedPreferences.CREDENCIAMENTO_HISTORY, new Gson().toJson(crdScoreHistory));
         editor.putString(Constants.SharedPreferences.FAC_HISTORY, new Gson().toJson(facScoreHistory));
         editor.putString(Constants.SharedPreferences.FAROL_HISTORY, new Gson().toJson(farolScoreHistory));

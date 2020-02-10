@@ -15,11 +15,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
+import java.util.stream.Stream;
 
 import br.com.aguido.weather.R;
+import br.com.aguido.weather.model.mongo.ScoreHistory;
+import br.com.aguido.weather.model.mongo.ScoreHistoryUnit;
 import br.com.aguido.weather.model.mongo.ScoreResults;
+import br.com.aguido.weather.model.mongo.TestsCase;
+import br.com.aguido.weather.model.mongo._id;
 import br.com.aguido.weather.model.numbers.OverallNumbers;
 import br.com.aguido.weather.util.Constants;
+import br.com.aguido.weather.util.Util;
 
 /**
  * Created by Gabriel Aguido Fraga on 12/11/15.
@@ -169,6 +176,98 @@ public class WeatherFragment extends Fragment {
 
     protected List<ScoreResults> getApplicationList(ScoreResults[] apps) {
         return new ArrayList<>(Arrays.asList(apps));
+    }
+
+    protected ScoreResults[] generateMockScoreResults() {
+
+
+        ArrayList<ScoreResults> srs = new ArrayList<>();
+
+        srs.add(generateMockscoreResult());
+        srs.add(generateMockscoreResult());
+        srs.add(generateMockscoreResult());
+        srs.add(generateMockscoreResult());
+
+        ScoreResults[] scoreResults = new ScoreResults[srs.size()];
+        scoreResults = srs.toArray(scoreResults);
+
+        return scoreResults;
+    }
+
+    private ScoreResults generateMockscoreResult() {
+
+        ScoreResults sr = new ScoreResults();
+        _id id = new _id();
+        id.setDate(new Random().nextLong());
+        sr.setApplicationName("Mock app");
+        sr.set_id(id);
+        TestsCase tc = new TestsCase();
+        tc.setNumberLong(new Random().nextLong());
+        sr.setTestsCase(tc);
+        sr.setAverageAge(new Random().nextInt(5));
+        sr.setAverageTimeFix(new Random().nextInt(5));
+        sr.setCoverage(new Random().nextInt(100-60)+60);
+        sr.setDefectsDensity(new Random().nextInt(100-60)+60);
+        sr.setDuplicationDensity(new Random().nextInt(5));
+        sr.setEffectiveness(new Random().nextInt(5));
+        sr.setExecutionsPassed(new Random().nextInt(1000-500)+500);
+        sr.setIssuesBlocker(new Random().nextInt(10));
+        sr.setIssuesBug(new Random().nextInt(20));
+        sr.setIssuesCodeSmell(new Random().nextInt(400));
+        sr.setIssuesCritical(new Random().nextInt(50));
+        sr.setIssuesMajor(new Random().nextInt(500));
+        sr.setIssuesVulnerabilities(new Random().nextInt(600));
+        sr.setNcloc(new Random().nextInt(10000-1000)+1000);
+        sr.setOpenDefects(new Random().nextInt(50));
+        sr.setOpenIssues(new Random().nextInt(100));
+        sr.setScore(new Random().nextInt(5));
+        sr.setScoreAverageAge(new Random().nextInt(5));
+        sr.setScoreAverageTimeFix(new Random().nextInt(5));
+        sr.setScoreCoverage(new Random().nextInt(5));
+        sr.setScoreDuplicationDensity(new Random().nextInt(5));
+        sr.setScoreEffectiveness(new Random().nextInt(5));
+        sr.setScoreOpenDefects(new Random().nextInt(5));
+        sr.setScoreOpenIssues(new Random().nextInt(5));
+        sr.setScoreSuccessRate(new Random().nextInt(5));
+        sr.setScoreTotalDefects(new Random().nextInt(5));
+        sr.setScoreTotalIssues(new Random().nextInt(5));
+        sr.setSuccessRate(new Random().nextInt(5));
+        sr.setSysIcon(new Util().getRandomIcon());
+        sr.setTotalDefects(new Random().nextInt(100));
+        sr.setTotalIssues(new Random().nextInt(200));
+        sr.setTotalProblems(new Random().nextInt(300));
+        sr.setTotalTestExecutions(new Random().nextInt(4000-500)+500);
+
+        return sr;
+    }
+
+    protected ScoreHistory generateMockScoreHistory() {
+
+        ScoreHistory sh = new ScoreHistory();
+        sh.setSysName("Mock App");
+        sh.setScoreHistoryList(generateScoreHistoryUnits());
+
+        return sh;
+    }
+
+    protected List<ScoreHistoryUnit> generateScoreHistoryUnits() {
+
+        List<ScoreHistoryUnit> shus = new ArrayList<>();
+        shus.add(generateScoreHistoryUnit());
+        shus.add(generateScoreHistoryUnit());
+        shus.add(generateScoreHistoryUnit());
+        shus.add(generateScoreHistoryUnit());
+        shus.add(generateScoreHistoryUnit());
+
+        return shus;
+    }
+
+    protected ScoreHistoryUnit generateScoreHistoryUnit() {
+
+        ScoreHistoryUnit shu = new ScoreHistoryUnit();
+        shu.setDate(new Random().nextLong());
+        shu.setScore(new Random().nextInt(5));
+        return shu;
     }
 
 }

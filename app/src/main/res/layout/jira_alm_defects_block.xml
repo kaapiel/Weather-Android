@@ -17,7 +17,7 @@
             android:layout_centerInParent="true"
             android:fontFamily="@font/museosans_700"
             android:text="@string/system_defects_value"
-            android:textColor="@color/white_cielo"
+            android:textColor="@color/white_weather"
             android:textSize="30dp" />
 
     </RelativeLayout>
@@ -40,7 +40,7 @@
                 android:layout_centerVertical="true"
                 android:text="@string/system_open_defects_key"
                 android:fontFamily="@font/museosans_700"
-                android:textColor="@color/black_cielo"
+                android:textColor="@color/black_weather"
                 android:textSize="20dp"
                 android:layout_alignParentLeft="true"/>
 
@@ -53,7 +53,7 @@
                 android:layout_marginBottom="83dp"
                 android:fontFamily="@font/museosans_700"
                 android:text="@string/system_open_defects_value"
-                android:textColor="@color/black_cielo"
+                android:textColor="@color/black_weather"
                 android:textSize="20dp" />
 
         </RelativeLayout>
@@ -70,7 +70,7 @@
                 android:layout_centerVertical="true"
                 android:text="@string/system_average_aging_key"
                 android:fontFamily="@font/museosans_700"
-                android:textColor="@color/black_cielo"
+                android:textColor="@color/black_weather"
                 android:textSize="20dp"
                 android:layout_alignParentLeft="true"/>
 
@@ -83,7 +83,7 @@
                 android:layout_marginBottom="11dp"
                 android:fontFamily="@font/museosans_700"
                 android:text="@string/system_average_aging_value"
-                android:textColor="@color/black_cielo"
+                android:textColor="@color/black_weather"
                 android:textSize="20dp" />
 
         </RelativeLayout>
@@ -100,7 +100,7 @@
                 android:layout_centerVertical="true"
                 android:text="@string/system_total_defects_key"
                 android:fontFamily="@font/museosans_700"
-                android:textColor="@color/black_cielo"
+                android:textColor="@color/black_weather"
                 android:textSize="20dp"
                 android:layout_alignParentLeft="true"/>
 
@@ -113,7 +113,7 @@
                 android:layout_marginBottom="11dp"
                 android:fontFamily="@font/museosans_700"
                 android:text="@string/system_total_defects_value"
-                android:textColor="@color/black_cielo"
+                android:textColor="@color/black_weather"
                 android:textSize="20dp" />
 
         </RelativeLayout>
@@ -130,7 +130,7 @@
                 android:layout_centerVertical="true"
                 android:text="@string/system_average_fix_time_key"
                 android:fontFamily="@font/museosans_700"
-                android:textColor="@color/black_cielo"
+                android:textColor="@color/black_weather"
                 android:textSize="20dp"
                 android:layout_alignParentLeft="true"/>
 
@@ -141,7 +141,7 @@
                 android:layout_centerVertical="true"
                 android:text="@string/system_average_fix_time_value"
                 android:fontFamily="@font/museosans_700"
-                android:textColor="@color/black_cielo"
+                android:textColor="@color/black_weather"
                 android:textSize="20dp"
                 android:layout_alignParentRight="true"/>
 

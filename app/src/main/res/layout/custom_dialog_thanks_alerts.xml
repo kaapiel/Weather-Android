@@ -29,7 +29,7 @@
             android:layout_centerHorizontal="true"
             android:fontFamily="@font/museosans_700"
             android:textSize="40dp"
-            android:textColor="@color/white_cielo"
+            android:textColor="@color/white_weather"
             android:text="@string/dialog_thanks_descrition" />
 
     </RelativeLayout>

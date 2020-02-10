@@ -40,7 +40,7 @@ public class DialogCustomAlert {
                                  final AlertDialogClickListener alertDialogClickListener) {
 
         this.alert = alert;
-        dialog = new Dialog(context, R.style.CieloReportsTheme_CustomDialog);
+        dialog = new Dialog(context, R.style.WeatherReportsTheme_CustomDialog);
         dialog.setContentView(layout);
 
         pb = dialog.findViewById(R.id.progress_loading_push);
@@ -54,7 +54,7 @@ public class DialogCustomAlert {
         try{
             rb = dialog.findViewById(R.id.rating);
             LayerDrawable stars = (LayerDrawable) rb.getProgressDrawable();
-            stars.getDrawable(2).setColorFilter(context.getResources().getColor(R.color.gold_cielo), PorterDuff.Mode.SRC_ATOP);
+            stars.getDrawable(2).setColorFilter(context.getResources().getColor(R.color.gold_weather), PorterDuff.Mode.SRC_ATOP);
         } catch (NullPointerException npe){
             //TODO
         }

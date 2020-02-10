@@ -16,7 +16,7 @@
             android:layout_centerInParent="true"
             android:fontFamily="@font/museosans_300"
             android:text="@string/system_type_issues_value"
-            android:textColor="@color/white_cielo"
+            android:textColor="@color/white_weather"
             android:textSize="30dp" />
 
     </RelativeLayout>

@@ -35,7 +35,7 @@
                 android:layout_below="@id/thumbnail"
                 android:layout_centerHorizontal="true"
                 android:gravity="center_horizontal"
-                android:textColor="@color/cielo_blue"
+                android:textColor="@color/weather_blue"
                 android:textSize="20dp"
                 android:fontFamily="@font/museosans_700"
                 android:text="@string/ranking_system_name"/>

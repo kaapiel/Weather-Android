@@ -147,12 +147,9 @@ public class SplashScreen extends WeatherActivity {
                     Constants.Mongo.MONGO_DATABASE_NAME,
                     Constants.Mongo.MONGO_PASSWORD.toCharArray());
 
-            try (MongoClient mongoClient = new MongoClient(
-                    new ServerAddress(
-                            Constants.Mongo.MONGO_IP,
-                            Constants.Mongo.MONGO_PORT),
-                    Collections.singletonList(mc))) {
-
+            try {
+                ServerAddress sa = new ServerAddress(Constants.Mongo.MONGO_IP, Constants.Mongo.MONGO_PORT);
+                MongoClient mongoClient = new MongoClient(sa, Collections.singletonList(mc));
                 MongoDatabase db = mongoClient.getDatabase(Constants.Mongo.MONGO_DATABASE_NAME);
                 MongoCollection<Document> applications = db.getCollection(Constants.Mongo.MONGO_APPLICATIONS_COLLECTION);
 
@@ -189,6 +186,8 @@ public class SplashScreen extends WeatherActivity {
                 e.printStackTrace();
                 SplashScreen.this.runOnUiThread(() -> Toast.makeText(getBaseContext(), Constants.Mongo.IMPOSSIBLE_CONNECT_MONGO, Toast.LENGTH_LONG).show());
                 SplashScreen.this.runOnUiThread(() -> new Handler().postDelayed(() -> System.exit(0), 4500));
+            } catch (ExceptionInInitializerError e) {
+                e.printStackTrace();
             }
             return null;
         }

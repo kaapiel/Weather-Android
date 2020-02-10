@@ -20,6 +20,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import br.com.aguido.weather.R;
 import br.com.aguido.weather.appManagement.WeatherFragment;
@@ -108,9 +109,16 @@ public class SystemScoreFragment extends WeatherFragment {
 
     private void replaceFragment(FragmentManager fm, Fragment fragment, String label) {
 
-        ScoreResults[] apps = new Gson()
-                .fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
-                        .getString(Constants.SharedPreferences.LAST_OK_APPLICATIONS, Constants.SharedPreferences.LAST_OK_APPLICATIONS), ScoreResults[].class);
+        ScoreResults[] apps;
+
+        try {
+            apps = new Gson()
+                    .fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
+                            .getString(Constants.SharedPreferences.LAST_OK_APPLICATIONS, Constants.SharedPreferences.LAST_OK_APPLICATIONS), ScoreResults[].class);
+        } catch (JsonSyntaxException ex) {
+            ex.printStackTrace();
+            apps = generateMockScoreResults();
+        }
 
         OverallNumbers on = getNumbers(apps, lastUpdt);
 

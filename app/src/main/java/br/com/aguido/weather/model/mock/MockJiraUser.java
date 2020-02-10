@@ -13,11 +13,11 @@ public class MockJiraUser {
     public User getMockJiraUser(){
 
         User u = new User();
-        u.setDisplayName("Usuário Cielo");
-        u.setEmailAddress("usuario.cielo@cielo.com.br");
+        u.setDisplayName("Usuário Weather");
+        u.setEmailAddress("usuario.weather@weather.com.br");
         u.setAvatarUrls(null);
         u.setUser("mock");
-        u.setUser("C!elo_1234");
+        u.setUser("Weather_1234");
 
         AvatarUrls a = new AvatarUrls();
         a.setAvatar48x48("");

@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="Squads"
             android:fontFamily="@font/museosans_500"
-            android:textColor="@color/white_cielo"
+            android:textColor="@color/white_weather"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/museosans_500"
             android:text="Projetos"
-            android:textColor="@color/white_cielo"
+            android:textColor="@color/white_weather"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -75,6 +75,6 @@
             android:layout_height="wrap_content"
             android:text="Sistemas"
             android:fontFamily="@font/museosans_500"
-            android:textColor="@color/white_cielo" />
+            android:textColor="@color/white_weather" />
     </LinearLayout>
 </merge>

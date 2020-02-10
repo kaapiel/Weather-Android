@@ -3,8 +3,8 @@
 
     <gradient
         android:angle="90"
-        android:endColor="@color/cielo_blue_strong_transparent"
-        android:startColor="@color/cielo_blue_strong_transparent"/>
+        android:endColor="@color/weather_blue_strong_transparent"
+        android:startColor="@color/weather_blue_strong_transparent"/>
 
     <corners
         android:topLeftRadius="20dp"

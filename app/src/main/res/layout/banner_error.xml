@@ -9,6 +9,6 @@
     <TextView
         android:id="@+id/banner_error_text"
         android:layout_centerInParent="true"
-        style="@style/CieloReportsTheme.TextView.Banner.Error" />
+        style="@style/WeatherReportsTheme.TextView.Banner.Error" />
 
 </RelativeLayout>

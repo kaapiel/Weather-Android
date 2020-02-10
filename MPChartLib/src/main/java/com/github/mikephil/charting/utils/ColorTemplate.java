@@ -67,7 +67,7 @@ public class ColorTemplate {
             rgb("#FF000000")
     };
 
-    public static final int[] CIELO_PASSED_FAILED_COLORS = {
+    public static final int[] WEATER_PASSED_FAILED_COLORS = {
             rgb("#00adef"), //passed
             rgb("#000000"),//failed
             //rgb("#FFAE36"), //blocked

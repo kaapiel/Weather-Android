@@ -23,7 +23,7 @@
             android:layout_centerInParent="true"
             android:textSize="25dp"
             android:fontFamily="@font/museosans_500"
-            android:textColor="@color/white_cielo"
+            android:textColor="@color/white_weather"
             android:text="@string/splash_jira_message" />
 
         <LinearLayout
@@ -43,7 +43,7 @@
                 android:background="@drawable/background_gradient_transparent_logout_buttons"
                 android:fontFamily="@font/museosans_500"
                 android:text="@string/splash_redirect"
-                android:textColor="@color/white_cielo" />
+                android:textColor="@color/white_weather" />
 
         </LinearLayout>
 

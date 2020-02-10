@@ -125,23 +125,23 @@
     <color name="generalchart_6">#FF000000</color>
 
     <!--Cores App-->
-    <color name="cielo_blue">#00adef</color>
-    <color name="purple_cielo">#533092</color>
-    <color name="black_cielo">#000000</color>
-    <color name="white_cielo">#FFFFFF</color>
-    <color name="grey_cielo">#888888</color>
-    <color name="light_grey_cielo">#e8e8e8</color>
+    <color name="weather_blue">#00adef</color>
+    <color name="purple_weather">#533092</color>
+    <color name="black_weather">#000000</color>
+    <color name="white_weather">#FFFFFF</color>
+    <color name="grey_weather">#888888</color>
+    <color name="light_grey_weather">#e8e8e8</color>
     <color name="blue_trophy">#00a2e8</color>
-    <color name="gold_cielo">#dba000</color>
+    <color name="gold_weather">#dba000</color>
 
     <!--Cores Transparente App-->
-    <color name="cielo_blue_transparent">#b300adef</color>
-    <color name="cielo_blue_strong_transparent">#4D00adef</color>
-    <color name="purple_cielo_transparent">#b3533092</color>
-    <color name="black_cielo_transparent">#b3000000</color>
-    <color name="white_cielo_transparent">#b3FFFFFF</color>
-    <color name="grey_cielo_transparent">#b3888888</color>
-    <color name="grey_cielo_strong">#333333</color>
+    <color name="weather_blue_transparent">#b300adef</color>
+    <color name="weather_blue_strong_transparent">#4D00adef</color>
+    <color name="purple_weather_transparent">#b3533092</color>
+    <color name="black_weather_transparent">#b3000000</color>
+    <color name="white_weather_transparent">#b3FFFFFF</color>
+    <color name="grey_weather_transparent">#b3888888</color>
+    <color name="grey_weather_strong">#333333</color>
 
     <!--transparency-->
     <color name="one_hundred">#FFFFFFFF</color>

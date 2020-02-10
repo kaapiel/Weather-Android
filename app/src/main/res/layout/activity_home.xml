@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <br.com.cielo.weather.ui.widget.BannerError
+        <br.com.aguido.weather.ui.widget.BannerError
             android:id="@+id/banner_error"
             android:layout_width="match_parent"
             android:layout_height="@dimen/login_banner_error_height"
@@ -35,15 +35,15 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/white_cielo"
+        android:background="@color/white_weather"
         android:clickable="true"
-        android:listDivider="@color/grey_cielo"
-        app:itemBackground="@color/white_cielo"
-        app:itemTextAppearance="@style/CieloReportsTheme.NavigationView.TextAppearance"
+        android:listDivider="@color/grey_weather"
+        app:itemBackground="@color/white_weather"
+        app:itemTextAppearance="@style/WeatherReportsTheme.NavigationView.TextAppearance"
         app:itemIconTint="@color/navigationdrawer_item_colors"
         app:itemTextColor="@color/navigationdrawer_item_colors"
 
-        app:theme="@style/CieloReportsTheme.NavigationView">
+        app:theme="@style/WeatherReportsTheme.NavigationView">
 
     </com.google.android.material.navigation.NavigationView>
 

@@ -21,7 +21,7 @@ public class DialogLoading {
     }
 
     public void show(){
-        dialog = new Dialog(context, R.style.CieloReportsTheme_Dialog_Loading);
+        dialog = new Dialog(context, R.style.WeatherReportsTheme_Dialog_Loading);
 
         RelativeLayout contentView = (RelativeLayout) ((Activity) context).getLayoutInflater().inflate(R.layout.loading, null) ;
 

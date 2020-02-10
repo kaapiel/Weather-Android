@@ -28,7 +28,7 @@
             android:layout_below="@id/view_status_bar_spacer">
 
             <ImageView
-                android:id="@+id/image_logo_cielo"
+                android:id="@+id/image_logo_weather"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginLeft="30dp"
@@ -40,7 +40,7 @@
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_centerHorizontal="true"
-                android:layout_below="@id/image_logo_cielo"
+                android:layout_below="@id/image_logo_weather"
                 android:paddingLeft="30dp"
                 android:src="@drawable/ic_launcher_white_with_name"
                 tools:ignore="ContentDescription"/>
@@ -66,7 +66,7 @@
                 android:paddingTop="80dp"
                 android:gravity="left"
                 android:text="@string/login_box_title"
-                android:textColor="@color/white_cielo"/>
+                android:textColor="@color/white_weather"/>
 
             <TextView
                 android:id="@+id/credentials_welcome_description"
@@ -79,7 +79,7 @@
                 android:layout_below="@+id/credentials_welcome"
                 android:gravity="left"
                 android:text="@string/login_company_credentials"
-                android:textColor="@color/white_cielo"/>
+                android:textColor="@color/white_weather"/>
 
             <EditText
                 android:id="@+id/txt_user"
@@ -94,8 +94,8 @@
                 android:fontFamily="@font/museosans_500"
                 android:inputType="textEmailAddress"
                 android:maxLength="50"
-                android:textColorHint="@color/white_cielo"
-                android:textColor="@color/white_cielo"
+                android:textColorHint="@color/white_weather"
+                android:textColor="@color/white_weather"
                 android:textSize="18sp"
                 tools:ignore="ContentDescription" />
 
@@ -117,7 +117,7 @@
                     android:gravity="center"
                     android:text="@string/login_button_join"
                     android:fontFamily="@font/museosans_700"
-                    android:textColor="@color/white_cielo"/>
+                    android:textColor="@color/white_weather"/>
 
                 <ProgressBar
                     android:id="@+id/progress_loading"
@@ -132,7 +132,7 @@
 
     </RelativeLayout>
 
-    <br.com.cielo.weather.ui.widget.BannerError
+    <br.com.aguido.weather.ui.widget.BannerError
         android:id="@+id/login_banner_error"
         android:layout_width="match_parent"
         android:layout_height="@dimen/login_banner_error_height"

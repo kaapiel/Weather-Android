@@ -152,7 +152,7 @@ public class LoginActivity extends WeatherActivity {
         } else if(!loginUser.getText().toString().contains("@")){
             throwLoginErrorMessage(getResources().getString(R.string.login_wrong_user));
             loginUser.setText("");
-        } else if(!loginUser.getText().toString().endsWith("@cielo.com.br")){
+        } else if(!loginUser.getText().toString().endsWith("@weather.com.br")){
             throwLoginErrorMessage(getResources().getString(R.string.login_wrong_user));
             loginUser.setText(loginUser.getText().toString().split("@")[0]);
         } else {
@@ -174,7 +174,7 @@ public class LoginActivity extends WeatherActivity {
     private void textChangedListeners() {
 
         loadingContent.getIndeterminateDrawable().setColorFilter(
-                getResources().getColor(R.color.cielo_blue), android.graphics.PorterDuff.Mode.MULTIPLY);
+                getResources().getColor(R.color.weather_blue), android.graphics.PorterDuff.Mode.MULTIPLY);
 
         loginUser.addTextChangedListener(new TextWatcher() {
             @Override

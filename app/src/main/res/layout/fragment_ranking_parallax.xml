@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="@color/cielo_blue"
+            app:contentScrim="@color/weather_blue"
             app:expandedTitleMarginStart="48dp"
             app:expandedTitleMarginEnd="64dp">
 
@@ -82,7 +82,7 @@
             android:layout_height="match_parent"
             android:divider="@null"
             android:dividerHeight="0dp"
-            android:background="@drawable/background_gradient_white_and_cielo_blue">
+            android:background="@drawable/background_gradient_white_and_weather_blue">
         </androidx.recyclerview.widget.RecyclerView>
     </androidx.core.widget.NestedScrollView>
 
@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         app:layout_anchor="@id/main_appbar"
         app:layout_anchorGravity="bottom|right|end"
-        android:backgroundTint="@color/black_cielo_transparent"
+        android:backgroundTint="@color/black_weather_transparent"
         android:src="@drawable/ic_menu"
         android:layout_margin="40dp" />
 

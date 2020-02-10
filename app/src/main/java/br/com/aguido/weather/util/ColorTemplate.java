@@ -8,13 +8,13 @@ public class ColorTemplate {
 
     }
 
-    public static final int[] CIELO_PASSED_FAILED_COLORS = new int[]{rgb("#00adef"), rgb("#000000")};
-    public static final int[] CIELO_TIER_COLORS = new int[]{rgb("#333333")};
+    public static final int[] WEATHER_PASSED_FAILED_COLORS = new int[]{rgb("#00adef"), rgb("#000000")};
+    public static final int[] WEATHER_TIER_COLORS = new int[]{rgb("#333333")};
     public static final int[] BLACK_AND_WHITE_COLORS = new int[]{rgb("#FFFFFF"), rgb("#000000")};
-    public static final int[] CIELO_PASSED_FAILED_REGULAR_COLORS = new int[]{rgb("#888888"), rgb("#000000"), rgb("#00adef")};
-    public static final int CIELO_GRAY = rgb("#888888");
-    public static final int CIELO_BLACK = rgb("#000000");
-    public static final int CIELO_BLUE = rgb("#00adef");
+    public static final int[] WEATHER_PASSED_FAILED_REGULAR_COLORS = new int[]{rgb("#888888"), rgb("#000000"), rgb("#00adef")};
+    public static final int WEATHER_GRAY = rgb("#888888");
+    public static final int WEATHER_BLACK = rgb("#000000");
+    public static final int WEATHER_BLUE = rgb("#00adef");
 
     private static int rgb(String hex) {
         int color = (int)Long.parseLong(hex.replace("#", ""), 16);

@@ -40,7 +40,7 @@ public class Constants {
         public static final String SAVE_SCORE_HISTORY = "Saved every score history";
         public static final String APP_HISTORY = "APP_HISTORY";
         public static final String CENTRALIZADOR_HISTORY = "CENTRALIZADOR_HISTORY";
-        public static final String CIELO_PAY_PTO_CORE_HISTORY = "CIELO_PAY_PTO_CORE_HISTORY";
+        public static final String WEATHER_PAY_PTO_CORE_HISTORY = "WEATHER_PAY_PTO_CORE_HISTORY";
         public static final String CREDENCIAMENTO_HISTORY = "CREDENCIAMENTO_HISTORY";
         public static final String FAC_HISTORY = "FAC_HISTORY";
         public static final String FAROL_HISTORY = "FAROL_HISTORY";
@@ -63,9 +63,9 @@ public class Constants {
         public static final String STAR = "STAR";
         public static final String CREDENCIAMENTO = "Credenciamento";
         public static final String RECEBA_MAIS = "Receba Mais";
-        public static final String CIELO_PAY_PTO_CORE = "Cielo Pay - PTO Core";
+        public static final String WEATHER_PAY_PTO_CORE = "Weather Pay - PTO Core";
         public static final String FAC = "FAC";
-        public static final String APP_CIELO = "App Cielo";
+        public static final String APP_WEATHER = "App Weather";
         public static final String SITE = "Site";
         public static final String VSC = "VSC";
         public static final String CENTRALIZADOR_ACC_RANGE = "Centralizador Acc Range";

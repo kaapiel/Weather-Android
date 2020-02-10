@@ -2,14 +2,14 @@ package br.com.aguido.weather.model.mongo;
 
 public class ScoreHistoryUnit implements Comparable<ScoreHistoryUnit>{
 
-    private Float score;
+    private float score;
     private Long date;
 
     public Float getScore() {
         return score;
     }
 
-    public void setScore(Float score) {
+    public void setScore(float score) {
         this.score = score;
     }
 

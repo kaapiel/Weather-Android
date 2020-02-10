@@ -18,7 +18,7 @@
 
         <TextView
             android:id="@+id/toolbar_title"
-            style="@style/CieloReportsTheme.TextView.Toolbar"
+            style="@style/WeatherReportsTheme.TextView.Toolbar"
             android:ellipsize="end"
             tools:text=""/>
 

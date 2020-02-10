@@ -40,6 +40,7 @@ import com.github.mikephil.charting.listener.OnChartGestureListener;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import com.github.mikephil.charting.utils.Utils;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -244,7 +245,7 @@ public class SystemGraphsFragment extends WeatherFragment implements OnChartGest
         sh = new ScoreHistory();
 
         switch (systemName) {
-            case Constants.Systems.APP_CIELO:
+            case Constants.Systems.APP_WEATHER:
 
                 sh = new Gson().fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
                         .getString(Constants.SharedPreferences.APP_HISTORY, Constants.SharedPreferences.APP_HISTORY), ScoreHistory.class);
@@ -256,10 +257,10 @@ public class SystemGraphsFragment extends WeatherFragment implements OnChartGest
                         .getString(Constants.SharedPreferences.CENTRALIZADOR_HISTORY, Constants.SharedPreferences.CENTRALIZADOR_HISTORY), ScoreHistory.class);
 
                 break;
-            case Constants.Systems.CIELO_PAY_PTO_CORE:
+            case Constants.Systems.WEATHER_PAY_PTO_CORE:
 
                 sh = new Gson().fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
-                        .getString(Constants.SharedPreferences.CIELO_PAY_PTO_CORE_HISTORY, Constants.SharedPreferences.CIELO_PAY_PTO_CORE_HISTORY), ScoreHistory.class);
+                        .getString(Constants.SharedPreferences.WEATHER_PAY_PTO_CORE_HISTORY, Constants.SharedPreferences.WEATHER_PAY_PTO_CORE_HISTORY), ScoreHistory.class);
 
                 break;
             case Constants.Systems.CREDENCIAMENTO:
@@ -352,11 +353,17 @@ public class SystemGraphsFragment extends WeatherFragment implements OnChartGest
                         .getString(Constants.SharedPreferences.POS_HISTORY, Constants.SharedPreferences.POS_HISTORY), ScoreHistory.class);
 
                 break;
+                default:
+                    sh = generateMockScoreHistory();
         }
 
-        apps = new Gson()
-                .fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
-                        .getString(Constants.SharedPreferences.LAST_OK_APPLICATIONS, Constants.SharedPreferences.LAST_OK_APPLICATIONS), ScoreResults[].class);
+        try {
+            apps = new Gson()
+                    .fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
+                            .getString(Constants.SharedPreferences.LAST_OK_APPLICATIONS, Constants.SharedPreferences.LAST_OK_APPLICATIONS), ScoreResults[].class);
+        } catch (JsonSyntaxException ex) {
+            apps = generateMockScoreResults();
+        }
 
         for (ScoreResults sr : apps) {
             if(sr.getApplicationName().equals(systemName)){
@@ -498,7 +505,7 @@ public class SystemGraphsFragment extends WeatherFragment implements OnChartGest
         leftAxis.setAxisMaximum(6f);
         leftAxis.setAxisMinimum(-1);
         leftAxis.setDrawZeroLine(true);
-        leftAxis.setGridColor(R.color.black_cielo);
+        leftAxis.setGridColor(R.color.black_weather);
         leftAxis.setGridLineWidth(1f);
 
         lineChart.getAxisRight().setEnabled(false);
@@ -566,7 +573,7 @@ public class SystemGraphsFragment extends WeatherFragment implements OnChartGest
             dataSet.setSliceSpace(3f);
             dataSet.setSelectionShift(5f);
 
-            dataSet.setColors(ColorTemplate.CIELO_PASSED_FAILED_COLORS);
+            dataSet.setColors(ColorTemplate.WEATHER_PASSED_FAILED_COLORS);
 
             PieData data = new PieData(dataSet);
             data.setValueTextSize(17f);
@@ -631,9 +638,9 @@ public class SystemGraphsFragment extends WeatherFragment implements OnChartGest
         set1.setValueFormatter(new BarValueFormatter());
         set2.setValueFormatter(new BarValueFormatter());
         set3.setValueFormatter(new BarValueFormatter());
-        set1.setColor(ColorTemplate.CIELO_GRAY);
-        set2.setColor(ColorTemplate.CIELO_BLACK);
-        set3.setColor(ColorTemplate.CIELO_BLUE);
+        set1.setColor(ColorTemplate.WEATHER_GRAY);
+        set2.setColor(ColorTemplate.WEATHER_BLACK);
+        set3.setColor(ColorTemplate.WEATHER_BLUE);
 
         ArrayList<IBarDataSet> dataSets = new ArrayList<>();
         dataSets.add(set1);
@@ -685,7 +692,7 @@ public class SystemGraphsFragment extends WeatherFragment implements OnChartGest
             set1.setFormSize(15.f);
 
             if (Utils.getSDKInt() >= 18) {
-                Drawable drawable = ContextCompat.getDrawable(getContext(), R.drawable.background_gradient_white_and_cielo_blue);
+                Drawable drawable = ContextCompat.getDrawable(getContext(), R.drawable.background_gradient_white_and_weather_blue);
                 set1.setFillDrawable(drawable);
             } else {
                 set1.setFillColor(Color.BLACK);

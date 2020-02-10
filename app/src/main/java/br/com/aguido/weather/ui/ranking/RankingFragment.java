@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -78,13 +79,23 @@ public class RankingFragment extends WeatherFragment {
 
     private ScoreResults[] getApplicationsFromBundle(){
 
-        ScoreResults[] apps = new Gson()
-                .fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
-                        .getString(Constants.SharedPreferences.LAST_OK_APPLICATIONS, Constants.SharedPreferences.LAST_OK_APPLICATIONS), ScoreResults[].class);
+        ScoreResults[] apps = new ScoreResults[1];
 
-        Arrays.sort(apps, (Comparator<Object>) (o1, o2) ->
-                Float.compare(((ScoreResults) o2).getScore(),
-                        ((ScoreResults) o1).getScore()));
+        try {
+            apps = new Gson()
+                    .fromJson(getContext()
+                            .getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
+                            .getString(Constants.SharedPreferences.LAST_OK_APPLICATIONS, Constants.SharedPreferences.LAST_OK_APPLICATIONS), ScoreResults[].class);
+
+            Arrays.sort(apps, (Comparator<Object>) (o1, o2) ->
+                    Float.compare(((ScoreResults) o2).getScore(),
+                            ((ScoreResults) o1).getScore()));
+
+        } catch (JsonSyntaxException ex) {
+            ex.printStackTrace();
+            apps = generateMockScoreResults();
+        }
+
         return apps;
     }
 

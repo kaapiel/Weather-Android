@@ -3,7 +3,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:background="@color/cielo_blue">
+    android:background="@color/weather_blue">
 
     <TextView
         android:id="@+id/position_number"
@@ -15,7 +15,7 @@
         android:fontFamily="@font/museosans_700"
         android:text="@string/sym_ranking_position"
         android:textSize="25dp"
-        android:textColor="@color/white_cielo"/>
+        android:textColor="@color/white_weather"/>
 
     <com.rey.material.widget.ImageView
         android:id="@+id/system_icon"
@@ -47,7 +47,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textSize="20dp"
-            android:textColor="@color/white_cielo"
+            android:textColor="@color/white_weather"
             android:fontFamily="@font/museosans_700"
             android:text="0.0" />
 
@@ -61,7 +61,7 @@
             android:fontFamily="@font/museosans_500"
             android:text="@string/ranking_system_name"
             android:textSize="20dp"
-            android:textColor="@color/white_cielo"/>
+            android:textColor="@color/white_weather"/>
 
     </RelativeLayout>
     

@@ -104,7 +104,7 @@ public class Util {
         shareIntent.putExtra(Intent.EXTRA_STREAM, uris);
         shareIntent.setType("image/*");
         shareIntent.setAction(Intent.ACTION_SEND_MULTIPLE);
-        shareIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"gabriel.fraga@cielo.com.br"});
+        shareIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"gabriel.fraga@weather.com.br"});
         shareIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Graficos gerados do Weather App");
         shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Segue em anexo os resultados extraidos do Weather Dashboard.\n\n"+u.getDisplayName());
         c.startActivity(Intent.createChooser(shareIntent, "Exportar para..."));

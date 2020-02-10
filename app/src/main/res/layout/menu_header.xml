@@ -27,7 +27,7 @@
                 android:layout_centerInParent="true"
                 android:tooltipText="@string/login_retreiving_credentials"/>
 
-            <br.com.cielo.weather.ui.customs.CustomImageView
+            <br.com.aguido.weather.ui.customs.CustomImageView
                 android:id="@+id/menu_header_logo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -37,22 +37,22 @@
 
         <TextView
             android:id="@+id/menu_header_hello"
-            style="@style/CieloReportsTheme.TextView.Menu.Header.Greet"
+            style="@style/WeatherReportsTheme.TextView.Menu.Header.Greet"
             android:fontFamily="@font/museosans_500"
             android:layout_below="@+id/menu_header_logo_container"
-            android:textColor="@color/black_cielo"
+            android:textColor="@color/black_weather"
             tools:text="@string/menu_header_greet" />
 
         <TextView
             android:id="@+id/menu_header_name_user"
-            style="@style/CieloReportsTheme.TextView.Menu.Header.Name"
+            style="@style/WeatherReportsTheme.TextView.Menu.Header.Name"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginRight="20dp"
             android:layout_below="@+id/menu_header_hello"
             android:fontFamily="@font/museosans_300"
-            android:textColor="@color/black_cielo"
-            tools:text="Cielo Silva" />
+            android:textColor="@color/black_weather"
+            tools:text="Weather Silva" />
 
     </RelativeLayout>
 
@@ -62,6 +62,6 @@
         android:layout_height="1dp"
         android:layout_below="@+id/header"
         android:layout_marginTop="18dp"
-        android:background="@color/black_cielo" />
+        android:background="@color/black_weather" />
 
 </RelativeLayout>

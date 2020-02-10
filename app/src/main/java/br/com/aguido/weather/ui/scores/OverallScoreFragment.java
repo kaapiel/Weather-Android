@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -70,9 +71,14 @@ public class OverallScoreFragment extends WeatherFragment {
 
     private void setupNumbers() {
 
-        apps = new Gson()
-                .fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
-                        .getString(Constants.SharedPreferences.LAST_OK_APPLICATIONS, Constants.SharedPreferences.LAST_OK_APPLICATIONS), ScoreResults[].class);
+        try {
+            apps = new Gson()
+                    .fromJson(getContext().getSharedPreferences(Constants.SharedPreferences.USER_PREFERENCES, MODE_PRIVATE)
+                            .getString(Constants.SharedPreferences.LAST_OK_APPLICATIONS, Constants.SharedPreferences.LAST_OK_APPLICATIONS), ScoreResults[].class);
+        } catch (JsonSyntaxException ex) {
+            ex.printStackTrace();
+            apps = generateMockScoreResults();
+        }
 
         Arrays.sort(apps, (Comparator<Object>) (o1, o2) ->
                 Float.compare(((ScoreResults) o2).getScore(),
