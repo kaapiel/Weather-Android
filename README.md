@@ -9,7 +9,7 @@
 [![API](https://img.shields.io/badge/API-26%2B-green.svg?style=flat)](https://android-arsenal.com/api?level=26)
 
 # Weather Android
-A powerful & easy to use Android app for quaity management!
+A powerful & easy to use Android app for quality management!
 
 You can found the iOS version of this app [here](https://github.com/kaapiel/Weather-iOS)
 
