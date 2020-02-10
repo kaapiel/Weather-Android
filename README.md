@@ -1,6 +1,4 @@
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/menu.png)
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/ranking.png)
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/system-options-0.png)
+![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/banner.png)
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=weather-android&metric=alert_status)](https://sonarcloud.io/dashboard?id=weather-android)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=weather-android&metric=ncloc)](https://sonarcloud.io/dashboard?id=weather-android)
@@ -30,12 +28,8 @@ Install this app and replace jira/sonar/jenkins servers urls!
 
 <h2 id="examples">Examples :eyes:</h2>
 
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/cards.png)
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/splash.png)
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/suggestions.png)
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/system-options-1.png)
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/system-options-2.png)
-![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/system-options-3.png)
+![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/example-1.png)
+![banner](https://raw.github.com/kaapiel/Raw-content/master/Weather-Android/example-2.png)
 
 <br/>
 
