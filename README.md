@@ -13,6 +13,12 @@ A powerful & easy to use Android app for quality management!
 
 You can found the iOS version of this app [here](https://github.com/kaapiel/Weather-iOS)
 
+### To access SonarCloud data use this link: 
+#### https://sonarcloud.io/dashboard?id=weather-android
+
+### To access pipeline and CI data use this link: 
+#### https://circleci.com/gh/kaapiel/Weather-Android
+
 ## Table of Contents
 1. [Quick Start](#quick-start)
 1. [Example usage](#examples)
